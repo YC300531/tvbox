@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,viewport-fit=cover">
+	<meta name="wechat-enable-text-zoom-em" content="true">
+	<title>Ku9</title>
+	<meta name="layoutmode" content="standard">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="ui.css">
+</head>
+
+<body>
+	<div class="page">
+		<div class="page__bd" style="height: 100%;">
+			<div class="weui-tab">
+
+				<div id="panel1" role="tabpanel" aria-labelledby="tab1" class="weui-tab__panel" style="display: none;background: #fff;">
+					<div class="weui-form">
+						<div class="weui-form__text-area">
+							<h2 class="weui-form__title">使用说明</h2>
+						</div>
+						<div class="weui-form__control-area">
+							<div class="weui-cells">
+								<div class="weui-panel weui-panel_access">
+									<div class="weui-panel__bd">
+										<div role="option" class="weui-media-box weui-media-box_text">
+											<strong class="weui-media-box__title">1、关于app</strong>
+											<p class="weui-media-box__desc">※支持多种视频格式。</p>
+											<p class="weui-media-box__desc">※支持图标显示。</p>
+                                            <p class="weui-media-box__desc">※支持EPG显示，七天回看（需频道源支持）。</p>
+											<p class="weui-media-box__desc">※支持24小时时移（需频道源支持）。</p>
+											<p class="weui-media-box__desc">※EPG兼容DIYP，百川，超级TV及XML(支持gz压缩文件)格式。</p>
+                                            <p class="weui-media-box__desc">※支持音频轨道，视频轨道和字幕轨道切换（需频道源支持）。</p>
+											<p class="weui-media-box__desc">※支持本地JS脚本代理。</p>
+											<p class="weui-media-box__desc">※订阅配置支持远程输入。</p>
+                                            <p class="weui-media-box__desc">以上功能仅供学习测试使用，禁止传播，非法使用和商业用途，请安装后24小时内卸载并删除。</p>
+                                            <p class="weui-media-box__desc">播放器仅支持安卓5.0以上设备。</p>
+										</div>
+										<div role="option" class="weui-media-box weui-media-box_text">
+											<strong class="weui-media-box__title">2、目录说明</strong>
+											<p class="weui-media-box__desc">appErrorLog：app闪退报错日志。</p>
+											<p class="weui-media-box__desc">download：正在使用的网络列表下载文件。</p>
+											<p class="weui-media-box__desc">js：存放js脚本文件，使用方式参考脚本说明。</p>
+											<p class="weui-media-box__desc">epgCache：EPG缓存目录；</p>
+											<p class="weui-media-box__desc">localData：存放本地列表文件。</p>
+											<p class="weui-media-box__desc">logo：存放图标文件和epg_data.json配置文件，可配置图标和EPG id；</p>
+											<p class="weui-media-box__desc">configuration：存放Configuration.json配置，可配置启动图url，退出图url，升级地址等；</p>
+
+										</div>
+										<div role="option" class="weui-media-box weui-media-box_text">
+											<strong class="weui-media-box__title">2、触屏说明</strong>
+											<p class="weui-media-box__desc">app界面，触摸屏幕左或右边部分为弹出主列表。</p>
+											<p class="weui-media-box__desc">app界面，触摸屏幕中间部分为弹出底部信息栏。</p>
+											<p class="weui-media-box__desc">app界面，长按触摸屏幕任意部分为弹出设置列表。</p>
+											<p class="weui-media-box__desc">app界面，屏幕右上下滑动为切换频道，左部分上下滑动为音量调整。</p>
+											<p class="weui-media-box__desc">app界面，屏幕左右滑动为切换线路（回看或视频片段时弹出进度条界面）。</p>
+											<p class="weui-media-box__desc">app界面，长按触摸屏幕任意部分为弹出设置列表。</p>
+											<p class="weui-media-box__desc">订阅界面：地址列表中，长按地址可进入编辑状态，点击可切换地址，编辑状态下按删除按钮或确定按钮为完成编辑。</p>
+											<p class="weui-media-box__desc">媒体信息界面：长按对应信息可复制对应内容。</p>
+										</div>
+										<div role="option" class="weui-media-box weui-media-box_text">
+											<strong class="weui-media-box__title">3、配置说明</strong>
+											<p class="weui-media-box__desc">解码方式：根据记忆解码开关，开启为单独设置，关闭为全局生效。</p>
+											<p class="weui-media-box__desc">EPG配置需选择解析方式，默认DIYP解析（推荐使用XmlTv格式EPG地址和解析）；</p>
+											<p class="weui-media-box__desc">EPG地址需配置对应的解析方式，否则不能加载</p>
+											<p class="weui-media-box__desc">EPG缓存：EPG地址配置后选择对应的解析方式，加载后会自动缓存，xml文件下载后一次性解析并保存；</p>
+											<p class="weui-media-box__desc">缓存自动清除6天前的，（非xml文件）明天后天及精彩节目epg不缓存</p>
+											<p class="weui-media-box__desc">选择xmltv解析时，xml数据每天首次启动app及上午7点后启动app会再缓存一次；</p>
+											<p class="weui-media-box__desc">epg_data.json配置文件存放在assets中，可拷贝至logo文件夹中自定义配置。</p>
+											<p class="weui-media-box__desc">读取图标顺序：本地json配置文件>本地图标文件>m3u列表中logo地址>assets文件配置。</p>
+											<p class="weui-media-box__desc">epg_data.json图标配置说明：</p>
+											<p class="weui-media-box__desc">1.epgid：获取epg需要的id名称；</p>
+											<p class="weui-media-box__desc">2.logo：本地图标名称或图标路径；</p>
+											<p class="weui-media-box__desc">logo内容为http开头地址则读取网络图标，与本地图标名称一致时读取本地图标；</p>
+											<p class="weui-media-box__desc">3.name：需要获取的图标或epg的频道名称，不区分大小写。</p>
+											<p class="weui-media-box__desc">app更新：assets文件夹拷贝update.json文件至服务器，Configuration.json文件配置指定地址；</p>
+											<p class="weui-media-box__desc">apk反编译搜索地址http://ku9/app/update.json修改文件存放地址，参数根据update.json调整即可。</p>
+											<p class="weui-media-box__desc">本地源路径格式一(局域网)：http://127.0.0.1:9978/file/你的文件路径/文件名及文件后缀。</p>
+											<p class="weui-media-box__desc">本地源路径格式二(本地)：file:///storage/emulated/0/你的文件路径/文件名及文件后缀。</p>
+										</div>
+										<div role="option" class="weui-media-box weui-media-box_text">
+											<strong class="weui-media-box__title">4、js脚本说明</strong>
+											<p class="weui-media-box__desc">频道地址格式1：http://A/ku9/js/B.C?id=D&nbsp;字符/ku9/js/为识别格式，A为任意多个或单个字符，B为任意脚本名，C为任意后缀名，D为任意id；</p>
+											<p class="weui-media-box__desc">内置的函数（注意大小写）：get;post;md5;encodeBase64;decodeBase64;isBase64;sha1;getQuery</p>
+											<p class="weui-media-box__desc">;opensslEncrypt;opensslDecrypt;isJsonObject;isJsonArray;headersValue;</p>
+											<p class="weui-media-box__desc">支持返回内容为m3u8切片播放。</p>
+											<p class="weui-media-box__desc">函数名称识别为main，函数调用： 内置函数名.call。</p>
+											<p class="weui-media-box__desc">示例：get.call(参数)，getQuery.call(参数)等。</p>
+											<p class="weui-media-box__desc">函数详情可参考极致播放器(js功能改版前)。</p>
+										</div>
+										<div role="option" class="weui-media-box weui-media-box_text">
+											<strong class="weui-media-box__title">5、加密列表地址格式</strong>
+											<p class="weui-media-box__desc">默认格式&nbsp;http://用户名:密码@地址。</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="panel2" role="tabpanel" aria-labelledby="tab2" class="weui-tab__panel" style="display: none;background: #fff;">
+					<div class="weui-form" style="min-height: 0;">
+						<div class="weui-form__text-area">
+							<h2 class="weui-form__title">订阅配置</h2>
+						</div>
+						<div class="weui-form__control-area" style="margin-bottom: 0px !important;">
+							<div class="weui-cells__group weui-cells__group_form">
+								<div class="weui-cells">
+									<div class="weui-cell weui-cell_active weui-cell_vcode weui-cell_wrap">
+										<div class="weui-cell__bd weui-flex">
+											<input id="diy_input_name"
+												class="weui-input weui-cell__control weui-cell__control_flex"
+												type="text" autocomplete="off" value="" placeholder="1. 输入内容以app编辑提示为准" />
+											<button onclick="newName(); return false;"
+												class="weui-cell__control weui-btn weui-btn_default weui-vcode-btn">确定</button>
+										</div>
+									</div>
+									<div class="weui-cell weui-cell_active weui-cell_vcode weui-cell_wrap">
+										<div class="weui-cell__bd weui-flex">
+											<input id="diy_input_url"
+													class="weui-input weui-cell__control weui-cell__control_flex"
+													type="text" autocomplete="off" value="" placeholder="2. 输入内容以app编辑提示为准" />
+											<button onclick="newUrl(); return false;"
+													class="weui-cell__control weui-btn weui-btn_default weui-vcode-btn">确定</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="panel3" role="tabpanel" aria-labelledby="tab3" class="weui-tab__panel" style="display: none;background: #fff;">
+					<div class="weui-form" style="padding-top: 50px; min-height: 0;">
+						<div class="weui-form__text-area">
+							<h2 class="weui-form__title">本地文件</h2>
+						</div>
+						<input type="file" id="file_uploader" style="display:none;" onchange="uploadTip()" multiple />
+						<div class="weui-form__control-area" style="text-align: center;margin-bottom: 10px !important;">
+							<div class="button-sp-area" style="margin-top: 10px;">
+								<a href="javascript:void(0)" role="button"
+										class="weui-btn weui-btn_mini weui-btn_default weui-wa-hotarea"
+										href="javascript:void(0)" onclick="uploadFile()">上传文件</a>&nbsp;
+								<a href="javascript:void(0)" role="button"
+										class="weui-btn weui-btn_mini weui-btn_default weui-wa-hotarea"
+										href="javascript:void(0)" onclick="newFolder()">新建文件夹</a>&nbsp;
+								<a id="delCurFolder" href="javascript:void(0)" role="button"
+										class="weui-btn weui-btn_mini weui-btn_warn weui-wa-hotarea"
+										href="javascript:void(0)" onclick="delFolder()" style="display: none;">删除当前文件夹</a>
+							</div>
+						</div>
+						<div class="weui-cells" id="file_list">
+						</div>
+					</div>
+				</div>
+
+				<div role="tablist" class="weui-tabbar">
+
+					<div id="tab1" role="tab" aria-labelledby="t1_title" aria-selected="false" aria-controls="panel1"
+							class="weui-tabbar__item">
+						<img style="width: 20px; height: 20px; margin: 5px 0 5px 0;"
+								src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/PjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+PHN2ZyB0PSIxNjgyNDkxMzk2NDM2IiBjbGFzcz0iaWNvbiIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHAtaWQ9IjI0NjAiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiPjxwYXRoIGQ9Ik01MTMuMyAxMDIzLjljLTM2LjUgMC03My4yLTMuOS0xMDkuNy0xMS44QzI3MC4xIDk4MyAxNTUuOCA5MDMuNyA4MS44IDc4OC43LTMxLjggNjExLjktMjYuNyAzODcgOTQuOSAyMTUuNmMxNC43LTIwLjcgNDMuNC0yNS41IDY0LTEwLjkgMjAuNyAxNC43IDI1LjUgNDMuMyAxMC45IDY0QzcwIDQwOS40IDY1LjggNTk0IDE1OSA3MzljNjAuNyA5NC40IDE1NC41IDE1OS41IDI2NC4xIDE4My4zIDEwOS42IDIzLjkgMjIyIDMuNSAzMTYuMy01Ny4yIDE5NC44LTEyNS4zIDI1MS40LTM4NS43IDEyNi4xLTU4MC41LTEyNS4yLTE5NC44LTM4NS42LTI1MS4zLTU4MC40LTEyNi0yMS4zIDEzLjctNDkuNyA3LjUtNjMuNC0xMy44LTEzLjctMjEuMy03LjUtNDkuNyAxMy44LTYzLjRDNDcyLjgtNzEuMyA3OTAuMi0yLjQgOTQyLjggMjM1YzE1Mi42IDIzNy40IDgzLjcgNTU0LjctMTUzLjYgNzA3LjQtODMuNiA1My43LTE3OC44IDgxLjUtMjc1LjkgODEuNXoiIGZpbGw9IiM1MTUxNTEiIHAtaWQ9IjI0NjEiPjwvcGF0aD48cGF0aCBkPSJNNTExLjEgNjc0LjhtLTU4LjYgMGE1OC42IDU4LjYgMCAxIDAgMTE3LjIgMCA1OC42IDU4LjYgMCAxIDAtMTE3LjIgMFoiIGZpbGw9IiM1MTUxNTEiIHAtaWQ9IjI0NjIiPjwvcGF0aD48cGF0aCBkPSJNNTExLjkgNTY0LjdjLTI1LjQgMC00NS45LTIwLjYtNDUuOS00NS45di0xNzdjMC0yNS40IDIwLjYtNDUuOSA0NS45LTQ1LjkgMjUuNCAwIDQ1LjkgMjAuNiA0NS45IDQ1Ljl2MTc3YzAuMSAyNS4zLTIwLjUgNDUuOS00NS45IDQ1Ljl6IiBmaWxsPSIjNTE1MTUxIiBwLWlkPSIyNDYzIj48L3BhdGg+PC9zdmc+"
+								alt="" class="weui-tabbar__icon">
+						<p aria-hidden="true" id="t1_title" class="weui-tabbar__label">说明</p>
+					</div>
+
+					<div id="tab2" role="tab" aria-labelledby="t2_title" aria-selected="true" aria-controls="panel2"
+							class="weui-tabbar__item">
+						<img style="width: 20px; height: 20px; margin: 5px 0 5px 0;"
+								src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAA3NCSVQICAjb4U/gAAAACXBIWXMAAAC5AAAAuQHip0HoAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAANtQTFRF////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAhQHXOQAAAEh0Uk5TAAECBAUGCQoNDxITGiAhKC4xMjM0Nzg8P0BDT1dmbHR4fX+MlpedoKOkp6issri5vL2/zs/S19zd4OHi5OXp7e/x8/f6+/z+bkNkuAAAATRJREFUOMuNk2kzAmAUhR8iUSHSokWobCFLtFBI9fz/X+RDzdQY9brfzl3mbufAghVfVF+KLLHoh6p+RJckHGkxmSzq0ZKEjF2ArplfgcPjHYBC2w5Ax3YBYOf4cBovjfw82dy71/ElwOVY7/c2Tz4dlQB2h6q9b3uVxLQiUen53VMd7gINWwflgT7G503jjzoop55sQN5JBuK12sbiWBu1WhzSE/PcectSu/WOjs31uWcrm92ao/WmHc70OTtzbNfHOq5vz2D2Wc9Yq3zpBQCxV+339TUGwIV+VdaAxIMtAKq+5SD3bhWAlg+zvc+9BogMzQHkHEYAbjyf9bryFGDf/hT33Qc49eq/CaEWgSGDawYPFTx18Fl5J+mV76bhU2oVYcKUC5I2TPuwcP4tvaB4/5T/D6drVhrBHvH6AAAAAElFTkSuQmCC"
+								alt="" class="weui-tabbar__icon">
+						<p id="t2_title" aria-hidden="true" class="weui-tabbar__label">配置</p>
+					</div>
+
+					<div id="tab3" role="tab" aria-labelledby="t3_title" aria-selected="false" aria-controls="panel3"
+							class="weui-tabbar__item weui-bar__item_on">
+						<img style="width: 20px; height: 20px; margin: 5px 0 5px 0;"
+								src="data:image/svg+xml;base64,PHN2ZyBpZD0ic3ZnIiBjbGFzcz0iaWNvbiIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHAtaWQ9IjE1OTI3IiB3aWR0aD0iMzIiIGhlaWdodD0iMzIiPjxwYXRoIGQ9Ik00MjMuMTE4IDY4Ljk1MmwxLjQwMyAwLjQ5OCAzNTcuMDgzIDEyOS45NjhjNDYuMjQgMTYuODMgNzAuMzA3IDY3LjYxNSA1NC4yODkgMTEzLjk0OWwtMC40OTggMS40MDItMTYuNDg3IDQ1LjI5OEg4NzBjNDkuMjA5IDAgODkuMTkzIDM5LjQ5MiA4OS45ODggODguNTFsMC4wMTIgMS40ODh2NDE5LjkzOEM5NjAgOTE5LjcwNyA5MTkuNzA2IDk2MCA4NzAgOTYwSDE1NGMtNDkuNzA2IDAtOTAtNDAuMjkzLTkwLTg5Ljk5N1YzNTMuMDE4YzAtNDkuNzA0IDQwLjI5NC04OS45OTggOTAtODkuOTk4aDEwNC4yOWw1MC44NzctMTM5Ljc4MmMxNi44My00Ni4yNCA2Ny42MTYtNzAuMzA0IDExMy45NS01NC4yODZ6TTMwMC4yMjIgMzIzLjAySDE1NGMtMTYuNTY5IDAtMzAgMTMuNDMtMzAgMjkuOTk5djUxNi45ODVjMCAxNi41NjggMTMuNDMxIDI5Ljk5OSAzMCAyOS45OTloNzE2YzE2LjU2OSAwIDMwLTEzLjQzMSAzMC0zMFY0NTAuMDY2YzAtMTYuNTY4LTEzLjQzMS0zMC0zMC0zMEg0MTkuNzYzYTYwIDYwIDAgMCAxLTQ3LjM0Ni0yMy4xNDNsLTQ4LjUyMi02Mi4zMzFhMzAgMzAgMCAwIDAtMjMuNjczLTExLjU3MnogbTY1LjUtMTc5LjcyNGwtMC4xNzMgMC40NjQtNDQuMzEzIDEyMS43NDhhOTAuMDAyIDkwLjAwMiAwIDAgMSA1MC4wMDUgMzIuMjI5bDQ4LjUyMiA2Mi4zMzIgMzM1LjI5NC0wLjAwMSAyMy45NTctNjUuODE5YzUuNjEtMTUuNDEzLTIuMjAyLTMyLjQ0LTE3LjQ2Ni0zOC4yNzdsLTAuNDY1LTAuMTczTDQwNCAxMjUuODNjLTE1LjQxNC01LjYxLTMyLjQ0IDIuMjAxLTM4LjI3OCAxNy40NjV6IG03OC45MzggNDQuMzVsMjQ0LjMyMyA4OC45MjRjMTUuNDEzIDUuNjEgMjMuNDM1IDIyLjUzOCAxOC4wOTUgMzcuOTgybC0wLjE2NiAwLjQ2OGMtNS42NjYgMTUuNTY5LTIyLjg4MSAyMy41OTYtMzguNDUgMTcuOTNMNDI0LjE0IDI0NC4wMjVjLTE1LjQxNC01LjYxLTIzLjQzNS0yMi41MzctMTguMDk2LTM3Ljk4MmwwLjE2Ni0wLjQ2OGM1LjY2Ni0xNS41NjkgMjIuODgxLTIzLjU5NiAzOC40NS0xNy45M3oiIGZpbGw9IiMwMDAwMDAiIHAtaWQ9IjE1OTI4Ii8+PC9zdmc+"
+								alt="" class="weui-tabbar__icon">
+						<p id="t3_title" aria-hidden="true" class="weui-tabbar__label">文件</p>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="fileInfoDialog" role="dialog" aria-modal="false" aria-hidden="true" style="display: none;">
+		<div role="button" class="weui-mask"></div>
+		<div class="weui-half-screen-dialog">
+			<div class="weui-half-screen-dialog__hd">
+				<div class="weui-half-screen-dialog__hd__main">
+					文件接口
+					<span class="weui-half-screen-dialog__tips" role="option">
+						点击使用时请打开应用内接口设置对话框
+					</span>
+				</div>
+			</div>
+			<div class="weui-half-screen-dialog__bd" id="fileInfo">
+				<div class="weui-form__control-area" style="margin-bottom: 0px !important;">
+					<div class="weui-cells__group weui-cells__group_form">
+						<div class="weui-cells">
+							<!-- <div class="weui-cell weui-cell_active weui-cell_vcode weui-cell_wrap">
+								<div class="weui-cell__hd"><label class="weui-label">测试地址</label></div>
+							</div>
+							<div class="weui-cell weui-cell_active weui-cell_vcode weui-cell_wrap">
+								<div class="weui-cell__bd weui-flex">
+									<input id="fileUrl0" class="weui-input weui-cell__control weui-cell__control_flex"
+										type="text" value="" readonly />
+
+								</div>
+							</div> -->
+							<div class="weui-cell weui-cell_active weui-cell_vcode weui-cell_wrap">
+								<div class="weui-cell__hd"><label class="weui-label">本机地址</label></div>
+								<div class="weui-cell__bd weui-flex"><button onclick="fileToApi(1); return false;"
+										class="weui-cell__control weui-btn weui-btn_default weui-vcode-btn">使用</button>
+								</div>
+							</div>
+							<div class="weui-cell weui-cell_active weui-cell_vcode weui-cell_wrap">
+								<div class="weui-cell__bd weui-flex">
+									<input id="fileUrl1" class="weui-input weui-cell__control weui-cell__control_flex"
+										type="text" value="" readonly />
+
+								</div>
+							</div>
+							<div class="weui-cell weui-cell_active weui-cell_vcode weui-cell_wrap">
+								<div class="weui-cell__hd"><label class="weui-label">局域网地址</label></div>
+								<div class="weui-cell__bd weui-flex"><button onclick="fileToApi(2); return false;"
+										class="weui-cell__control weui-btn weui-btn_default weui-vcode-btn">使用</button>
+								</div>
+							</div>
+							<div class="weui-cell weui-cell_active weui-cell_vcode weui-cell_wrap">
+								<div class="weui-cell__bd weui-flex">
+									<input id="fileUrl2" class="weui-input weui-cell__control weui-cell__control_flex"
+										type="text" value="" readonly />
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="weui-half-screen-dialog__ft" style="padding-bottom: 30px;">
+				<div class="weui-half-screen-dialog__btn-area">
+					<a href="javascript:void(0)" class="weui-btn weui-btn_default" onclick="hideFileInfo()">关闭</a>
+					<a href="javascript:void(0)" id="delFileBtn" class="weui-btn weui-btn_warn"
+						onclick="delFile()">删除文件</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div role="dialog" aria-hidden="true" aria-modal="true" id="uploadTip" style="display: none;">
+		<div class="weui-mask"></div>
+		<div class="weui-dialog">
+			<div class="weui-dialog__hd"><strong class="weui-dialog__title">确认上传?</strong></div>
+			<div class="weui-dialog__bd" id="uploadTipContent"></div>
+			<div class="weui-dialog__ft">
+				<a role="button" href="javascript:void(0)" onclick="doUpload(0)"
+					class="weui-dialog__btn weui-dialog__btn_default">取消</a>
+				<a role="button" href="javascript:void(0)" onclick="doUpload(1)"
+					class="weui-dialog__btn weui-dialog__btn_primary">确定</a>
+			</div>
+		</div>
+	</div>
+
+	<div role="dialog" aria-hidden="true" aria-modal="true" id="newFolder" style="display: none;">
+		<div class="weui-mask"></div>
+		<div class="weui-dialog">
+			<div class="weui-dialog__hd"><strong class="weui-dialog__title">新建文件夹</strong></div>
+			<div class="weui-dialog__bd">
+				<input id="newFolderContent" class="weui-input weui-cell__control weui-cell__control_flex" type="text"
+					value="" placeholder="请输入文件夹名称..." />
+			</div>
+			<div class="weui-dialog__ft">
+				<a role="button" href="javascript:void(0)" onclick="doNewFolder(0)"
+					class="weui-dialog__btn weui-dialog__btn_default">取消</a>
+				<a role="button" href="javascript:void(0)" onclick="doNewFolder(1)"
+					class="weui-dialog__btn weui-dialog__btn_primary">确定</a>
+			</div>
+		</div>
+	</div>
+
+	<div role="dialog" aria-hidden="true" aria-modal="true" id="delFolder" style="display: none;">
+		<div class="weui-mask"></div>
+		<div class="weui-dialog">
+			<div class="weui-dialog__hd"><strong class="weui-dialog__title">删除文件夹</strong></div>
+			<div class="weui-dialog__bd" id="delFolderContent"></div>
+			<div class="weui-dialog__ft">
+				<a role="button" href="javascript:void(0)" onclick="doDelFolder(0)"
+					class="weui-dialog__btn weui-dialog__btn_default">取消</a>
+				<a role="button" href="javascript:void(0)" onclick="doDelFolder(1)"
+					class="weui-dialog__btn weui-dialog__btn_primary">确定</a>
+			</div>
+		</div>
+	</div>
+
+	<div role="dialog" aria-hidden="true" aria-modal="true" id="delFile" style="display: none;">
+		<div class="weui-mask"></div>
+		<div class="weui-dialog">
+			<div class="weui-dialog__hd"><strong class="weui-dialog__title">删除文件</strong></div>
+			<div class="weui-dialog__bd" id="delFileContent"></div>
+			<div class="weui-dialog__ft">
+				<a role="button" href="javascript:void(0)" onclick="doDelFile(0)"
+					class="weui-dialog__btn weui-dialog__btn_default">取消</a>
+				<a role="button" href="javascript:void(0)" onclick="doDelFile(1)"
+					class="weui-dialog__btn weui-dialog__btn_primary">确定</a>
+			</div>
+		</div>
+	</div>
+
+	<div role="alert" id="warnToast" style="display: none;">
+		<div class="weui-mask_transparent"></div>
+		<div class="weui-toast">
+			<i class="weui-icon-warn weui-icon_toast"></i>
+			<p class="weui-toast__content" id="warnToastContent"></p>
+		</div>
+	</div>
+
+	<div role="alert" id="loadingToast" style="display: none;">
+		<div class="weui-mask_transparent"></div>
+		<div class="weui-toast">
+			<span class="weui-primary-loading weui-icon_toast">
+				<span class="weui-primary-loading__dot"></span>
+			</span>
+			<p class="weui-toast__content">加载中</p>
+		</div>
+	</div>
+	<script src="jquery.js"></script>
+	<script src="script.js"></script>
+</body>
+
+</html>

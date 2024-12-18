@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_gravity="center" android:background="@drawable/shape_user_focus" android:focusable="true" android:layout_width="fill_parent" android:layout_height="@dimen/vs_50" android:layout_margin="@dimen/vs_4"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/ts_22" android:textColor="@android:color/white" android:gravity="center" android:layout_gravity="center" android:id="@+id/keyName" android:layout_width="fill_parent" android:layout_height="fill_parent" android:textAlignment="gravity" />
+</FrameLayout>

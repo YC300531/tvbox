@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" android:layout_marginEnd="10.0dip">
+            <TextView android:textSize="16.0dip" android:textColor="@android:color/white" android:ellipsize="end" android:gravity="center" android:id="@+id/urlName" android:background="@drawable/shape_dialog_button_style" android:focusable="true" android:layout_width="fill_parent" android:layout_height="37.0dip" android:maxLines="2" android:paddingStart="3.0dip" android:paddingEnd="3.0dip" />
+        </LinearLayout>
+        <LinearLayout android:gravity="end|center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="37.0dip">
+            <ImageView android:id="@+id/urlCopyButton" android:background="@drawable/shape_dialog_button_style" android:padding="6.0dip" android:focusable="true" android:layout_width="37.0dip" android:layout_height="37.0dip" android:src="@drawable/icon_copy" android:scaleType="fitCenter" android:layout_marginEnd="10.0dip" />
+            <ImageView android:id="@+id/urlDeButton" android:background="@drawable/shape_dialog_button_style" android:padding="4.0dip" android:focusable="true" android:layout_width="37.0dip" android:layout_height="37.0dip" android:src="@drawable/icon_delete" android:scaleType="fitCenter" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

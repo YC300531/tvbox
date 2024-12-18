@@ -1,0 +1,18 @@
+{
+  "Configuration": {
+    "Note_1": "启动图片url",
+    "loginPng": "/storage/emulated/0/酷9/app_banner.png",
+    "Note_2": "退出图片url",
+    "exitPng": "https://ExitImageUrl",
+    "Note_3": "app升级配置文件url",
+    "updateUrl": "http://ku9/app/update.json",
+    "Note_4": "是否隐藏加载数据文字提示及动画，false显示，true隐藏",
+    "hideLoginText": false,
+    "Note_5": "启动数据提示文字",
+    "loginText": "正在加载数据，请稍后...",
+    "Note_6": "加载文字颜色",
+    "loginTextColor": "#FFFFFF",
+    "Note_7": "加载动画颜色",
+    "ProgressBarColor": "#FFFFFF"
+  }
+}

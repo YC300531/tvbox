@@ -1,0 +1,96 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+    android { useLibrary 'org.apache.http.legacy' }
+    defaultConfig {
+        applicationId "com.palayer.ku9"
+        minSdkVersion 24
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+
+        ndk {
+            abiFilters "armeabi", "armeabi-v7a", "x86", "mips"
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['src/main/jniLibs']
+        }
+    }
+}
+
+repositories {
+    flatDir { dirs 'libs' }
+}
+
+dependencies {
+/**
+ 重要说明：
+ 1、目前已经删除了系统框架和已知的第三方SDK的java代码，并自动添加了这些SDK的implementation信息
+ 2、请自行分辨左侧的代码类包，建议删除不属于项目本身的代码类包（即尚未自动识别的第三方sdk包）
+ 3、查找第三方sdk包的implementation信息方法：打开百度，搜索 包名 implementation（例如搜索 com.umeng.socialize implementation）,一般情况下即可找到对应的sdk包导入方法
+ 4、本代码采用jadx引擎反编译，极少部分比较复杂的代码可能反编译失败，代码中已经有标记，请用jeb3找到相应的类和方法，解析源代码后，人工修复
+ 5、attrs.xml代码中的styleable不能自动修复，请在java代码报错的地方分析并手工在attrs.xml中添加styleable
+ 6、如果遇到疑问，请访问 https://www.apkeditor.cn/Detail.aspx?id=24 获取更详细的视频教程说明
+ */
+
+implementation 'com.kingja.loadsir:loadsir:1.3.6'
+implementation  'com.android.support:design:28.0.0'
+implementation 'com.google.android.material:material:1.4.0'
+implementation ('com.thoughtworks.xstream:xstream:1.4.7')
+implementation 'com.obsez.android.lib.filechooser:filechooser:1.1.10'
+api 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0'
+    api 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+implementation 'com.squareup.okio:okio:3.0.0'
+implementation 'androidx.startup:startup-runtime:1.0.0'
+implementation 'com.google.zxing:core: 3.5.1'
+implementation 'androidx.multidex:multidex:2.0.0'
+implementation  'com.blankj:utilcode:1.30.7'
+implementation 'androidx.appcompat:appcompat:1.0.2'
+implementation 'xyz.doikki.android.dkplayer:dkplayer-java:3.3.7'
+    implementation 'xyz.doikki.android.dkplayer:player-ijk:3.3.7'
+    implementation 'xyz.doikki.android.dkplayer:videocache:3.3.7'
+implementation 'me.jessyan:autosize:1.2.1'
+implementation 'com.aliyun.sdk.android:AliyunPlayer:4.5.0-full'
+implementation  'androidx.exifinterface:exifinterface:1.3.3'
+implementation 'androidx.annotation:annotation:1.3.0'
+implementation "androidx.room:room-rxjava3:2.4.2"
+    implementation "androidx.room:room-runtime:2.4.2"
+runtimeOnly 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.1'
+implementation 'com.squareup.okhttp3:okhttp:3.8.1'
+implementation group: 'com.squareup.okhttp3', name: 'logging-interceptor', version: '5.0.0-alpha.11'
+implementation  'com.github.bumptech.glide:glide:4.13.1'
+implementation 'org.simpleframework:simple-xml:2.7.1'
+implementation 'androidx.databinding:databinding-runtime:4.2.2'
+implementation 'com.facebook.android:facebook-android-sdk:9.0.0'
+implementation 'org.jetbrains.kotlin:kotlin-stdlib:1.8.20'
+implementation 'com.orhanobut:hawk: 2.0.1'
+ implementation 'com.orhanobut:logger:2.2.0'
+ implementation 'tv.danmaku.ijk.media:ijkplayer-java:0.8.8'
+    implementation 'tv.danmaku.ijk.media:ijkplayer-armv7a:0.8.8' 
+    implementation 'tv.danmaku.ijk.media:ijkplayer-armv5:0.8.8'
+    implementation 'tv.danmaku.ijk.media:ijkplayer-arm64:0.8.8'
+    implementation 'tv.danmaku.ijk.media:ijkplayer-x86:0.8.8'
+    implementation 'tv.danmaku.ijk.media:ijkplayer-x86_64:0.8.8'
+    implementation 'tv.danmaku.ijk.media:ijkplayer-exo:0.8.8'
+implementation  'org.greenrobot:eventbus:3.3.1'
+
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.multidex:multidex:2.0.0'
+}
