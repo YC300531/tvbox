@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string-array name="doh_name">
+    <item>System</item>
+    <item>Tencent</item>
+    <item>Alibaba</item>
+    <item>360</item>
+  </string-array>
+  <string-array name="doh_url">
+    <item>
+    </item>
+    <item>https://doh.pub/dns-query</item>
+    <item>https://dns.alidns.com/dns-query</item>
+    <item>https://doh.360.cn/dns-query</item>
+  </string-array>
+  <string-array name="exo_controls_playback_speeds">
+    <item>0.25x</item>
+    <item>0.5x</item>
+    <item>0.75x</item>
+    <item>Normal</item>
+    <item>1.25x</item>
+    <item>1.5x</item>
+    <item>2x</item>
+  </string-array>
+</resources>

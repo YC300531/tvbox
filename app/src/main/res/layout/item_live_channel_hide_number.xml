@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="6.0dip" android:paddingEnd="6.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center" android:layout_gravity="center_vertical" android:orientation="vertical" android:id="@+id/LoadingViewGroup" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="6.0dip">
+        <TextView android:textSize="12.0dip" android:textColor="@android:color/white" android:gravity="center" android:id="@+id/tvChannelNum" android:background="@drawable/shape_channel_num_bg" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <ImageView android:gravity="center" android:layout_gravity="center" android:id="@+id/tv_channel_logo" android:layout_width="80.0dip" android:layout_height="50.0dip" android:adjustViewBounds="true" app:srcCompat="@drawable/img_logo_placeholder" />
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="6.0dip">
+        <com.github.tvbox.osc.ui.tv.CustomView.MarqueeTextView android:textSize="17.0dip" android:textColor="@android:color/white" android:ellipsize="end" android:gravity="left" android:id="@+id/tvChannelName" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:marqueeRepeatLimit="marquee_forever" />
+        <com.github.tvbox.osc.ui.tv.CustomView.MarqueeTextView android:textSize="11.0dip" android:textColor="@color/color_FFFFFF_80" android:ellipsize="end" android:gravity="left" android:id="@+id/tvChannelNowEpg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:marqueeRepeatLimit="marquee_forever" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="6.0dip">
+        <com.github.tvbox.osc.ui.tv.CustomView.MusicLoadingView android:layout_gravity="center" android:id="@+id/music_LoadingView" android:layout_width="fill_parent" android:layout_height="wrap_content" app:changeSpeed="26" app:changeStep="0.1" app:lineColor="#ffb00020" app:lineCount="1" app:lineMaxHeight="22.0dip" app:lineMinHeight="5.0dip" app:lineSpace="3.0dip" app:lineWidth="2.0dip" />
+        <ImageView android:gravity="center_vertical" android:id="@+id/favor_logo" android:layout_width="13.0dip" android:layout_height="13.0dip" android:adjustViewBounds="true" android:layout_marginStart="3.0dip" app:srcCompat="@drawable/icon_favor" />
+    </LinearLayout>
+</LinearLayout>

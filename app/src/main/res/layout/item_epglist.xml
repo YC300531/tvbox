@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/cl_epg" android:focusable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="6.0dip" android:paddingEnd="6.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@+id/touch" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="14.0dip" android:gravity="start" android:id="@+id/tv_epg_time" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        <TextView android:textSize="11.0dip" android:textColor="@color/color_FFFFFF" android:gravity="center" android:layout_gravity="center" android:id="@+id/shiyi" android:background="@drawable/shape_huikan_background" android:layout_width="40.0dip" android:layout_height="wrap_content" android:text="回看" />
+    </LinearLayout>
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.github.tvbox.osc.ui.tv.CustomView.MarqueeTextView android:textSize="16.0dip" android:ellipsize="end" android:gravity="center|left" android:id="@+id/tv_epg_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:marqueeRepeatLimit="marquee_forever" />
+    </LinearLayout>
+</LinearLayout>

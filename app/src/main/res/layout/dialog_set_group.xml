@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="horizontal" android:padding="15.0dip" android:focusable="true" android:layout_width="wrap_content" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/mSetGroupLeftLayout" android:background="@drawable/shsape_setgroup_leftlayout_drawable" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/mSetGroupLeftHeight" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.github.tvbox.osc.ui.tv.CustomView.CustomRecyclerView android:id="@+id/mSettingItemView" android:layout_width="fill_parent" android:layout_height="wrap_content" android:listSelector="@null" android:paddingStart="6.0dip" android:paddingEnd="6.0dip" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/mSetGroupRightLayout" android:background="@drawable/shape_setgroup_rightlayout_drawable" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/mSetGroupRightHeight" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.github.tvbox.osc.ui.tv.CustomView.CustomRecyclerView android:id="@+id/mSettingGroupView" android:layout_width="fill_parent" android:layout_height="wrap_content" android:listSelector="@null" android:paddingStart="6.0dip" android:paddingEnd="6.0dip" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

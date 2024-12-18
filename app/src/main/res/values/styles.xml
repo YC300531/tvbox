@@ -1,0 +1,695 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <style name="ActivityTranslucent" parent="@style/Theme.AppCompat.Light.NoActionBar">
+    <item name="android:windowBackground">@android:color/transparent</item>
+    <item name="android:windowNoTitle">true</item>
+    <item name="android:windowIsTranslucent">true</item>
+    <item name="android:windowContentOverlay">@null</item>
+    <item name="android:windowAnimationStyle">@null</item>
+    <item name="android:background">@android:color/transparent</item>
+    <item name="android:backgroundDimEnabled">false</item>
+    <item name="android:windowDisablePreview">true</item>
+    <item name="android:colorBackgroundCacheHint">@null</item>
+    <item name="android:windowActionBar">false</item>
+  </style>
+  <style name="AndroidThemeColorAccentYellow" />
+  <style name="AppTheme" parent="@style/Theme.AppCompat.Light.DarkActionBar">
+    <item name="colorAccent">?color_theme</item>
+    <item name="colorPrimary">@color/color_32364E</item>
+    <item name="colorPrimaryDark">@color/color_32364E_40</item>
+  </style>
+  <style name="AppTheme.NoActionBar" parent="@style/AppTheme">
+    <item name="android:windowBackground">@android:color/transparent</item>
+    <item name="android:windowNoTitle">true</item>
+    <item name="android:windowContentOverlay">@null</item>
+    <item name="android:windowFullscreen">true</item>
+    <item name="android:windowActionBar">false</item>
+    <item name="windowActionBar">false</item>
+    <item name="windowNoTitle">true</item>
+  </style>
+  <style name="Channel.Group.PopupAnimation" parent="@android:style/Animation">
+    <item name="android:windowEnterAnimation">@anim/channel_group_slide_in_left</item>
+    <item name="android:windowExitAnimation">@anim/channel_group_slide_out_left</item>
+  </style>
+  <style name="CustomDialogStyle" parent="@android:style/Theme.Dialog">
+    <item name="android:windowBackground">@android:color/transparent</item>
+    <item name="android:windowFrame">@null</item>
+    <item name="android:windowNoTitle">true</item>
+    <item name="android:windowIsFloating">true</item>
+    <item name="android:windowIsTranslucent">true</item>
+    <item name="android:windowContentOverlay">@null</item>
+    <item name="android:windowFullscreen">true</item>
+    <item name="android:backgroundDimEnabled">false</item>
+  </style>
+  <style name="CustomDialogStyleDim" parent="@android:style/Theme.Dialog">
+    <item name="android:windowBackground">@android:color/transparent</item>
+    <item name="android:windowFrame">@null</item>
+    <item name="android:windowNoTitle">true</item>
+    <item name="android:windowIsFloating">true</item>
+    <item name="android:windowIsTranslucent">true</item>
+    <item name="android:windowContentOverlay">@null</item>
+    <item name="android:windowFullscreen">true</item>
+    <item name="android:backgroundDimEnabled">true</item>
+  </style>
+  <style name="ExoMediaButton">
+    <item name="android:background">?android:selectableItemBackground</item>
+    <item name="android:layout_width">@dimen/exo_media_button_width</item>
+    <item name="android:layout_height">@dimen/exo_media_button_height</item>
+  </style>
+  <style name="ExoMediaButton.FastForward" parent="@style/ExoMediaButton">
+    <item name="android:src">@drawable/exo_legacy_controls_fastforward</item>
+    <item name="android:contentDescription">@string/exo_controls_fastforward_description</item>
+  </style>
+  <style name="ExoMediaButton.Next" parent="@style/ExoMediaButton">
+    <item name="android:src">@drawable/exo_legacy_controls_next</item>
+    <item name="android:contentDescription">@string/exo_controls_next_description</item>
+  </style>
+  <style name="ExoMediaButton.Pause" parent="@style/ExoMediaButton">
+    <item name="android:src">@drawable/exo_legacy_controls_pause</item>
+    <item name="android:contentDescription">@string/exo_controls_pause_description</item>
+  </style>
+  <style name="ExoMediaButton.Play" parent="@style/ExoMediaButton">
+    <item name="android:src">@drawable/exo_legacy_controls_play</item>
+    <item name="android:contentDescription">@string/exo_controls_play_description</item>
+  </style>
+  <style name="ExoMediaButton.Previous" parent="@style/ExoMediaButton">
+    <item name="android:src">@drawable/exo_legacy_controls_previous</item>
+    <item name="android:contentDescription">@string/exo_controls_previous_description</item>
+  </style>
+  <style name="ExoMediaButton.Rewind" parent="@style/ExoMediaButton">
+    <item name="android:src">@drawable/exo_legacy_controls_rewind</item>
+    <item name="android:contentDescription">@string/exo_controls_rewind_description</item>
+  </style>
+  <style name="ExoMediaButton.VR" parent="@style/ExoMediaButton">
+    <item name="android:src">@drawable/exo_legacy_controls_vr</item>
+    <item name="android:contentDescription">@string/exo_controls_vr_description</item>
+  </style>
+  <style name="ExoStyledControls" />
+  <style name="ExoStyledControls.Button" parent="@style/ExoStyledControls">
+    <item name="android:background">?android:selectableItemBackground</item>
+    <item name="android:layout_marginLeft">@dimen/exo_icon_horizontal_margin</item>
+    <item name="android:layout_marginRight">@dimen/exo_icon_horizontal_margin</item>
+    <item name="android:scaleType">fitXY</item>
+  </style>
+  <style name="ExoStyledControls.Button.Bottom" parent="@style/ExoStyledControls.Button">
+    <item name="android:gravity">center_horizontal</item>
+    <item name="android:paddingLeft">@dimen/exo_small_icon_padding_horizontal</item>
+    <item name="android:paddingTop">@dimen/exo_small_icon_padding_vertical</item>
+    <item name="android:paddingRight">@dimen/exo_small_icon_padding_horizontal</item>
+    <item name="android:paddingBottom">@dimen/exo_small_icon_padding_vertical</item>
+    <item name="android:layout_width">@dimen/exo_small_icon_width</item>
+    <item name="android:layout_height">@dimen/exo_small_icon_height</item>
+    <item name="android:layout_marginLeft">@dimen/exo_small_icon_horizontal_margin</item>
+    <item name="android:layout_marginRight">@dimen/exo_small_icon_horizontal_margin</item>
+  </style>
+  <style name="ExoStyledControls.Button.Bottom.AudioTrack" parent="@style/ExoStyledControls.Button.Bottom">
+    <item name="android:src">@drawable/exo_styled_controls_audiotrack</item>
+    <item name="android:contentDescription">@string/exo_track_selection_title_audio</item>
+  </style>
+  <style name="ExoStyledControls.Button.Bottom.CC" parent="@style/ExoStyledControls.Button.Bottom">
+    <item name="android:src">@drawable/exo_styled_controls_subtitle_off</item>
+    <item name="android:contentDescription">@string/exo_controls_cc_disabled_description</item>
+  </style>
+  <style name="ExoStyledControls.Button.Bottom.FullScreen" parent="@style/ExoStyledControls.Button.Bottom">
+    <item name="android:src">@drawable/exo_styled_controls_fullscreen_enter</item>
+    <item name="android:contentDescription">@string/exo_controls_fullscreen_enter_description</item>
+  </style>
+  <style name="ExoStyledControls.Button.Bottom.OverflowHide" parent="@style/ExoStyledControls.Button.Bottom">
+    <item name="android:src">@drawable/exo_styled_controls_overflow_hide</item>
+    <item name="android:contentDescription">@string/exo_controls_overflow_hide_description</item>
+  </style>
+  <style name="ExoStyledControls.Button.Bottom.OverflowShow" parent="@style/ExoStyledControls.Button.Bottom">
+    <item name="android:src">@drawable/exo_styled_controls_overflow_show</item>
+    <item name="android:contentDescription">@string/exo_controls_overflow_show_description</item>
+  </style>
+  <style name="ExoStyledControls.Button.Bottom.PlaybackSpeed" parent="@style/ExoStyledControls.Button.Bottom">
+    <item name="android:src">@drawable/exo_styled_controls_speed</item>
+    <item name="android:contentDescription">@string/exo_controls_playback_speed</item>
+  </style>
+  <style name="ExoStyledControls.Button.Bottom.RepeatToggle" parent="@style/ExoStyledControls.Button.Bottom">
+    <item name="android:src">@drawable/exo_styled_controls_repeat_off</item>
+    <item name="android:contentDescription">@string/exo_controls_repeat_off_description</item>
+  </style>
+  <style name="ExoStyledControls.Button.Bottom.Settings" parent="@style/ExoStyledControls.Button.Bottom">
+    <item name="android:src">@drawable/exo_styled_controls_settings</item>
+    <item name="android:contentDescription">@string/exo_controls_settings_description</item>
+  </style>
+  <style name="ExoStyledControls.Button.Bottom.Shuffle" parent="@style/ExoStyledControls.Button.Bottom">
+    <item name="android:src">@drawable/exo_styled_controls_shuffle_off</item>
+    <item name="android:contentDescription">@string/exo_controls_shuffle_off_description</item>
+  </style>
+  <style name="ExoStyledControls.Button.Bottom.VR" parent="@style/ExoStyledControls.Button.Bottom">
+    <item name="android:src">@drawable/exo_styled_controls_vr</item>
+    <item name="android:contentDescription">@string/exo_controls_vr_description</item>
+  </style>
+  <style name="ExoStyledControls.Button.Center" parent="@style/ExoStyledControls.Button">
+    <item name="android:layout_width">@dimen/exo_icon_size</item>
+    <item name="android:layout_height">@dimen/exo_icon_size</item>
+  </style>
+  <style name="ExoStyledControls.Button.Center.FfwdWithAmount" parent="@style/ExoStyledControls.Button.Center">
+    <item name="android:textSize">@dimen/exo_icon_text_size</item>
+    <item name="android:textStyle">bold</item>
+    <item name="android:textColor">@color/exo_white</item>
+    <item name="android:gravity">bottom|center</item>
+    <item name="android:paddingLeft">0.0dip</item>
+    <item name="android:paddingRight">0.0dip</item>
+    <item name="android:paddingBottom">@dimen/exo_icon_padding_bottom</item>
+    <item name="android:foreground">@drawable/exo_styled_controls_fastforward</item>
+    <item name="android:insetBottom">0.0dip</item>
+    <item name="backgroundTint">@color/exo_white</item>
+  </style>
+  <style name="ExoStyledControls.Button.Center.Next" parent="@style/ExoStyledControls.Button.Center">
+    <item name="android:padding">@dimen/exo_icon_padding</item>
+    <item name="android:src">@drawable/exo_styled_controls_next</item>
+    <item name="android:contentDescription">@string/exo_controls_next_description</item>
+  </style>
+  <style name="ExoStyledControls.Button.Center.PlayPause" parent="@style/ExoStyledControls.Button.Center">
+    <item name="android:padding">@dimen/exo_icon_padding</item>
+    <item name="android:src">@drawable/exo_styled_controls_play</item>
+    <item name="android:contentDescription">@string/exo_controls_play_description</item>
+  </style>
+  <style name="ExoStyledControls.Button.Center.Previous" parent="@style/ExoStyledControls.Button.Center">
+    <item name="android:padding">@dimen/exo_icon_padding</item>
+    <item name="android:src">@drawable/exo_styled_controls_previous</item>
+    <item name="android:contentDescription">@string/exo_controls_previous_description</item>
+  </style>
+  <style name="ExoStyledControls.Button.Center.RewWithAmount" parent="@style/ExoStyledControls.Button.Center">
+    <item name="android:textSize">@dimen/exo_icon_text_size</item>
+    <item name="android:textStyle">bold</item>
+    <item name="android:textColor">@color/exo_white</item>
+    <item name="android:gravity">bottom|center</item>
+    <item name="android:paddingLeft">0.0dip</item>
+    <item name="android:paddingRight">0.0dip</item>
+    <item name="android:paddingBottom">@dimen/exo_icon_padding_bottom</item>
+    <item name="android:foreground">@drawable/exo_styled_controls_rewind</item>
+    <item name="android:insetBottom">0.0dip</item>
+    <item name="backgroundTint">@color/exo_white</item>
+  </style>
+  <style name="ExoStyledControls.TimeBar" parent="@style/ExoStyledControls">
+    <item name="android:layout_height">@dimen/exo_styled_progress_layout_height</item>
+    <item name="bar_gravity">bottom</item>
+    <item name="bar_height">@dimen/exo_styled_progress_bar_height</item>
+    <item name="scrubber_dragged_size">@dimen/exo_styled_progress_dragged_thumb_size</item>
+    <item name="scrubber_enabled_size">@dimen/exo_styled_progress_enabled_thumb_size</item>
+    <item name="touch_target_height">@dimen/exo_styled_progress_touch_target_height</item>
+  </style>
+  <style name="ExoStyledControls.TimeText" parent="@style/ExoStyledControls">
+    <item name="android:textSize">14.0sp</item>
+    <item name="android:textStyle">bold</item>
+    <item name="android:gravity">center</item>
+    <item name="android:layout_gravity">center_vertical</item>
+    <item name="android:paddingLeft">4.0dip</item>
+    <item name="android:paddingRight">4.0dip</item>
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:layout_height">wrap_content</item>
+  </style>
+  <style name="ExoStyledControls.TimeText.Duration" parent="@style/ExoStyledControls.TimeText">
+    <item name="android:textColor">@color/exo_white_opacity_70</item>
+    <item name="android:text">@string/exo_controls_time_placeholder</item>
+  </style>
+  <style name="ExoStyledControls.TimeText.Position" parent="@style/ExoStyledControls.TimeText">
+    <item name="android:textColor">@color/exo_white</item>
+    <item name="android:text">@string/exo_controls_time_placeholder</item>
+  </style>
+  <style name="ExoStyledControls.TimeText.Separator" parent="@style/ExoStyledControls.TimeText">
+    <item name="android:textColor">@color/exo_white_opacity_70</item>
+    <item name="android:text">·</item>
+  </style>
+  <style name="FileChooserButtonStyle" parent="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog">
+    <item name="android:textColor">@color/material_deep_teal_500</item>
+    <item name="android:textAppearanceButton">@style/TextAppearance.AppCompat.Button</item>
+  </style>
+  <style name="FileChooserDialogStyle" parent="@style/Theme.AppCompat.Light.Dialog.Alert">
+    <item name="android:backgroundDimAmount">0.3</item>
+    <item name="android:windowIsFloating">true</item>
+    <item name="android:windowContentOverlay">@null</item>
+    <item name="android:windowTitleStyle">@style/FileChooserTitleStyle</item>
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:buttonBarStyle">@style/Widget.AppCompat.ButtonBar.AlertDialog</item>
+    <item name="android:buttonBarButtonStyle">@style/FileChooserButtonStyle</item>
+    <item name="android:windowMinWidthMajor">@android:dimen/dialog_min_width_major</item>
+    <item name="android:windowMinWidthMinor">@android:dimen/dialog_min_width_minor</item>
+    <item name="buttonBarButtonStyle">@style/FileChooserButtonStyle</item>
+    <item name="buttonBarStyle">@style/Widget.AppCompat.ButtonBar.AlertDialog</item>
+  </style>
+  <style name="FileChooserFileIconStyle">
+    <item name="android:background">@android:color/transparent</item>
+    <item name="android:padding">0.0dip</item>
+    <item name="android:layout_marginLeft">12.0dip</item>
+    <item name="android:layout_marginRight">6.0dip</item>
+    <item name="android:scaleType">fitCenter</item>
+  </style>
+  <style name="FileChooserListItemStyle">
+    <item name="android:background">@color/li_row_background</item>
+    <item name="android:padding">10.0dip</item>
+    <item name="android:descendantFocusability">beforeDescendants</item>
+    <item name="fileChooserFileIconStyle">@style/FileChooserFileIconStyle</item>
+    <item name="fileChooserTextDateStyle">@style/FileChooserTextDateStyle</item>
+    <item name="fileChooserTextNameStyle">@style/FileChooserTextNameStyle</item>
+    <item name="fileChooserTextSizeStyle">@style/FileChooserTextSizeStyle</item>
+    <item name="fileListItemFocusedDrawable">@drawable/listview_item_selector</item>
+    <item name="fileListItemSelectedTint">@color/li_row_background_tint</item>
+  </style>
+  <style name="FileChooserNewFolderStyle">
+    <item name="fileChooserNewFolderBackgroundColor">#ffffffff</item>
+    <item name="fileChooserNewFolderElevation">25</item>
+    <item name="fileChooserNewFolderOverlayColor">#60ffffff</item>
+    <item name="fileChooserNewFolderSoftInputMode">adjustNothing</item>
+    <item name="fileChooserNewFolderTextColor">@color/material_deep_teal_500</item>
+    <item name="fileChooserNewFolderWidthWeight">0.56</item>
+  </style>
+  <style name="FileChooserPathViewStyle">
+    <item name="android:textSize">12.0sp</item>
+    <item name="android:textColor">#40000000</item>
+    <item name="android:background">#ffffffff</item>
+    <item name="android:paddingLeft">16.0dip</item>
+    <item name="android:paddingTop">3.0dip</item>
+    <item name="android:paddingRight">16.0dip</item>
+    <item name="android:paddingBottom">3.0dip</item>
+    <item name="android:maxLines">1</item>
+    <item name="android:lines">1</item>
+    <item name="fileChooserPathViewDisplayRoot">true</item>
+    <item name="fileChooserPathViewElevation">2</item>
+  </style>
+  <style name="FileChooserStyle">
+    <item name="android:textColorPrimary">@color/material_deep_teal_500</item>
+    <item name="android:textColorSecondary">@color/material_deep_teal_500</item>
+    <item name="android:textColor">@color/material_deep_teal_500</item>
+    <item name="colorAccent">@color/material_deep_teal_200</item>
+    <item name="colorPrimary">@color/material_deep_teal_500</item>
+    <item name="colorPrimaryDark">@color/material_deep_teal_500</item>
+    <item name="fileChooserDialogGravity">center</item>
+    <item name="fileChooserDialogStyle">@style/FileChooserDialogStyle</item>
+    <item name="fileChooserListItemStyle">@style/FileChooserListItemStyle</item>
+    <item name="fileChooserNewFolderStyle">@style/FileChooserNewFolderStyle</item>
+    <item name="fileChooserPathViewStyle">@style/FileChooserPathViewStyle</item>
+  </style>
+  <style name="FileChooserTextDateStyle">
+    <item name="android:textSize">13.0sp</item>
+    <item name="android:textColor">@color/material_deep_teal_200</item>
+    <item name="android:background">@android:color/transparent</item>
+    <item name="android:padding">0.0dip</item>
+    <item name="android:paddingLeft">@dimen/list_item_padding</item>
+    <item name="android:paddingRight">@dimen/list_item_padding</item>
+    <item name="android:maxLines">1</item>
+  </style>
+  <style name="FileChooserTextNameStyle">
+    <item name="android:textSize">16.0sp</item>
+    <item name="android:textColor">@color/material_deep_teal_500</item>
+    <item name="android:ellipsize">marquee</item>
+    <item name="android:background">@android:color/transparent</item>
+    <item name="android:padding">0.0dip</item>
+    <item name="android:paddingLeft">@dimen/list_item_padding</item>
+    <item name="android:paddingRight">@dimen/list_item_padding</item>
+    <item name="android:maxLines">1</item>
+    <item name="android:drawablePadding">@dimen/list_item_padding</item>
+  </style>
+  <style name="FileChooserTextSizeStyle">
+    <item name="android:textSize">13.0sp</item>
+    <item name="android:textColor">@color/material_deep_teal_200</item>
+    <item name="android:background">@android:color/transparent</item>
+    <item name="android:padding">0.0dip</item>
+    <item name="android:paddingLeft">@dimen/list_item_padding</item>
+    <item name="android:paddingRight">@dimen/list_item_padding</item>
+    <item name="android:maxLines">1</item>
+  </style>
+  <style name="FileChooserTitleStyle">
+    <item name="android:textAppearance">@style/TextAppearance.AppCompat.Title</item>
+    <item name="android:textColor">#ff000000</item>
+    <item name="android:maxLines">1</item>
+    <item name="android:scrollHorizontally">true</item>
+  </style>
+  <style name="FluorescentBlueTheme" parent="@style/AppTheme.NoActionBar">
+    <item name="color_theme">#ff00d2ff</item>
+    <item name="color_theme_40">#6600d2ff</item>
+    <item name="color_theme_50">#8000d2ff</item>
+    <item name="color_theme_60">#9900d2ff</item>
+    <item name="color_theme_70">#b300d2ff</item>
+    <item name="color_theme_80">#cc00d2ff</item>
+  </style>
+  <style name="FreshGreenThem" parent="@style/AppTheme.NoActionBar">
+    <item name="color_theme">#ff70c439</item>
+    <item name="color_theme_40">#6670c439</item>
+    <item name="color_theme_50">#8070c439</item>
+    <item name="color_theme_60">#9970c439</item>
+    <item name="color_theme_70">#b370c439</item>
+    <item name="color_theme_80">#cc70c439</item>
+  </style>
+  <style name="MyEditText" parent="@style/Theme.AppCompat.Light">
+    <item name="colorControlActivated">@color/color_FFFFFF_90</item>
+    <item name="colorControlNormal">@color/color_FFFFFF_70</item>
+  </style>
+  <style name="RosesRedheme" parent="@style/AppTheme.NoActionBar">
+    <item name="color_theme">#ffff4242</item>
+    <item name="color_theme_40">#66ff4242</item>
+    <item name="color_theme_50">#80ff4242</item>
+    <item name="color_theme_60">#99ff4242</item>
+    <item name="color_theme_70">#b3ff4242</item>
+    <item name="color_theme_80">#ccff4242</item>
+  </style>
+  <style name="Set.Group.PopupAnimation" parent="@android:style/Animation">
+    <item name="android:windowEnterAnimation">@anim/set_group_slide_in_right</item>
+    <item name="android:windowExitAnimation">@anim/set_group_slide_out_right</item>
+  </style>
+  <style name="SkyBlueTheme" parent="@style/AppTheme.NoActionBar">
+    <item name="color_theme">#ff2b8cf3</item>
+    <item name="color_theme_40">#662b8cf3</item>
+    <item name="color_theme_50">#802b8cf3</item>
+    <item name="color_theme_60">#992b8cf3</item>
+    <item name="color_theme_70">#b32b8cf3</item>
+    <item name="color_theme_80">#cc2b8cf3</item>
+  </style>
+  <style name="Theme.AppCompat.Empty" parent="" />
+  <style name="Theme.AppCompat.Leanback" parent="@style/Theme.AppCompat.LeanbackBase">
+    <item name="baseCardViewStyle">@style/Widget.Leanback.BaseCardViewStyle</item>
+    <item name="browsePaddingBottom">@dimen/lb_browse_padding_bottom</item>
+    <item name="browsePaddingEnd">@dimen/lb_browse_padding_end</item>
+    <item name="browsePaddingStart">@dimen/lb_browse_padding_start</item>
+    <item name="browsePaddingTop">@dimen/lb_browse_padding_top</item>
+    <item name="browseRowsFadingEdgeLength">@dimen/lb_browse_rows_fading_edge</item>
+    <item name="browseRowsMarginStart">@dimen/lb_browse_rows_margin_start</item>
+    <item name="browseRowsMarginTop">@dimen/lb_browse_rows_margin_top</item>
+    <item name="browseTitleIconStyle">@style/Widget.Leanback.Title.Icon</item>
+    <item name="browseTitleTextStyle">@style/Widget.Leanback.Title.Text</item>
+    <item name="browseTitleViewLayout">@layout/lb_browse_title</item>
+    <item name="browseTitleViewStyle">@style/Widget.Leanback.TitleView</item>
+    <item name="datePickerStyle">@style/Widget.Leanback.PickerStyle.DatePickerStyle</item>
+    <item name="defaultSearchBrightColor">?defaultSearchColor</item>
+    <item name="defaultSearchColor">@color/lb_default_search_color</item>
+    <item name="defaultSearchIcon">@drawable/lb_ic_in_app_search</item>
+    <item name="defaultSearchIconColor">@color/lb_default_search_icon_color</item>
+    <item name="defaultSectionHeaderColor">?defaultSearchColor</item>
+    <item name="detailsActionButtonStyle">@style/Widget.Leanback.DetailsActionButtonStyle</item>
+    <item name="detailsDescriptionBodyStyle">@style/Widget.Leanback.DetailsDescriptionBodyStyle</item>
+    <item name="detailsDescriptionSubtitleStyle">@style/Widget.Leanback.DetailsDescriptionSubtitleStyle</item>
+    <item name="detailsDescriptionTitleStyle">@style/Widget.Leanback.DetailsDescriptionTitleStyle</item>
+    <item name="errorMessageStyle">@style/Widget.Leanback.ErrorMessageStyle</item>
+    <item name="headerStyle">@style/Widget.Leanback.Header</item>
+    <item name="headersVerticalGridStyle">@style/Widget.Leanback.Headers.VerticalGridView</item>
+    <item name="imageCardViewBadgeStyle">@style/Widget.Leanback.ImageCardView.BadgeStyle</item>
+    <item name="imageCardViewContentStyle">@style/Widget.Leanback.ImageCardView.ContentStyle</item>
+    <item name="imageCardViewImageStyle">@style/Widget.Leanback.ImageCardView.ImageStyle</item>
+    <item name="imageCardViewInfoAreaStyle">@style/Widget.Leanback.ImageCardView.InfoAreaStyle</item>
+    <item name="imageCardViewStyle">@style/Widget.Leanback.ImageCardViewStyle</item>
+    <item name="imageCardViewTitleStyle">@style/Widget.Leanback.ImageCardView.TitleStyle</item>
+    <item name="itemsVerticalGridStyle">@style/Widget.Leanback.GridItems.VerticalGridView</item>
+    <item name="overlayDimActiveLevel">@fraction/lb_view_active_level</item>
+    <item name="overlayDimDimmedLevel">@fraction/lb_view_dimmed_level</item>
+    <item name="overlayDimMaskColor">@color/lb_view_dim_mask_color</item>
+    <item name="pickerStyle">@style/Widget.Leanback.PickerStyle</item>
+    <item name="pinPickerStyle">@style/Widget.Leanback.PickerStyle.PinPickerStyle</item>
+    <item name="playbackControlButtonLabelStyle">@style/Widget.Leanback.PlaybackControlLabelStyle</item>
+    <item name="playbackControlsActionIcons">@style/Widget.Leanback.PlaybackControlsActionIconsStyle</item>
+    <item name="playbackControlsAutoHideTickleTimeout">@integer/lb_playback_controls_tickle_timeout_ms</item>
+    <item name="playbackControlsAutoHideTimeout">@integer/lb_playback_controls_show_time_ms</item>
+    <item name="playbackControlsButtonStyle">@style/Widget.Leanback.PlaybackControlsButtonStyle</item>
+    <item name="playbackControlsTimeStyle">@style/Widget.Leanback.PlaybackControlsTimeStyle</item>
+    <item name="playbackMediaItemDetailsStyle">@style/Widget.Leanback.PlaybackMediaItemDetailsStyle</item>
+    <item name="playbackMediaItemDurationStyle">@style/Widget.Leanback.PlaybackMediaItemDurationStyle</item>
+    <item name="playbackMediaItemNameStyle">@style/Widget.Leanback.PlaybackMediaItemNameStyle</item>
+    <item name="playbackMediaItemNumberStyle">@style/Widget.Leanback.PlaybackMediaItemNumberStyle</item>
+    <item name="playbackMediaItemNumberViewFlipperLayout">@layout/lb_media_item_number_view_flipper</item>
+    <item name="playbackMediaItemNumberViewFlipperStyle">@style/Widget.Leanback.PlaybackMediaItemNumberViewFlipperStyle</item>
+    <item name="playbackMediaItemPaddingStart">@dimen/lb_playback_media_row_horizontal_padding</item>
+    <item name="playbackMediaItemRowStyle">@style/Widget.Leanback.PlaybackMediaItemRowStyle</item>
+    <item name="playbackMediaItemSeparatorStyle">@style/Widget.Leanback.PlaybackMediaItemSeparatorStyle</item>
+    <item name="playbackMediaListHeaderStyle">@style/Widget.Leanback.PlaybackMediaListHeaderStyle</item>
+    <item name="playbackMediaListHeaderTitleStyle">@style/Widget.Leanback.PlaybackMediaListHeaderTitleStyle</item>
+    <item name="playbackPaddingEnd">@dimen/lb_playback_controls_margin_end</item>
+    <item name="playbackPaddingStart">@dimen/lb_playback_controls_margin_start</item>
+    <item name="rowHeaderDescriptionStyle">@style/Widget.Leanback.Row.Header.Description</item>
+    <item name="rowHeaderDockStyle">@style/Widget.Leanback.Row.HeaderDock</item>
+    <item name="rowHeaderStyle">@style/Widget.Leanback.Row.Header</item>
+    <item name="rowHorizontalGridStyle">@style/Widget.Leanback.Row.HorizontalGridView</item>
+    <item name="rowHoverCardDescriptionStyle">@style/Widget.Leanback.Row.HoverCardDescription</item>
+    <item name="rowHoverCardTitleStyle">@style/Widget.Leanback.Row.HoverCardTitle</item>
+    <item name="rowsVerticalGridStyle">@style/Widget.Leanback.Rows.VerticalGridView</item>
+    <item name="searchOrbViewStyle">@style/Widget.Leanback.SearchOrbViewStyle</item>
+    <item name="sectionHeaderStyle">@style/Widget.Leanback.Header.Section</item>
+    <item name="timePickerStyle">@style/Widget.Leanback.PickerStyle.TimePickerStyle</item>
+  </style>
+  <style name="Theme.AppCompat.Leanback.Browse" parent="@style/Theme.AppCompat.Leanback" />
+  <style name="Theme.AppCompat.Leanback.Details" parent="@style/Theme.AppCompat.Leanback" />
+  <style name="Theme.AppCompat.Leanback.Details.NoSharedElementTransition" parent="@style/Theme.AppCompat.Leanback.Details" />
+  <style name="Theme.AppCompat.Leanback.GuidedStep" parent="@style/Theme.AppCompat.Leanback.GuidedStepBase">
+    <item name="android:windowBackground">@android:color/transparent</item>
+    <item name="guidanceBreadcrumbStyle">@style/Widget.Leanback.GuidanceBreadcrumbStyle</item>
+    <item name="guidanceContainerStyle">@style/Widget.Leanback.GuidanceContainerStyle</item>
+    <item name="guidanceDescriptionStyle">@style/Widget.Leanback.GuidanceDescriptionStyle</item>
+    <item name="guidanceIconStyle">@style/Widget.Leanback.GuidanceIconStyle</item>
+    <item name="guidanceTitleStyle">@style/Widget.Leanback.GuidanceTitleStyle</item>
+    <item name="guidedActionContentWidthWeight">@dimen/lb_guidedactions_width_weight</item>
+    <item name="guidedActionContentWidthWeightTwoPanels">@dimen/lb_guidedactions_width_weight_two_panels</item>
+    <item name="guidedActionDescriptionMinLines">@integer/lb_guidedactions_item_description_min_lines</item>
+    <item name="guidedActionDisabledChevronAlpha">@dimen/lb_guidedactions_item_disabled_chevron_alpha</item>
+    <item name="guidedActionEnabledChevronAlpha">@dimen/lb_guidedactions_item_enabled_chevron_alpha</item>
+    <item name="guidedActionItemCheckmarkStyle">@style/Widget.Leanback.GuidedActionItemCheckmarkStyle</item>
+    <item name="guidedActionItemChevronStyle">@style/Widget.Leanback.GuidedActionItemChevronStyle</item>
+    <item name="guidedActionItemContainerStyle">@style/Widget.Leanback.GuidedActionItemContainerStyle</item>
+    <item name="guidedActionItemContentStyle">@style/Widget.Leanback.GuidedActionItemContentStyle</item>
+    <item name="guidedActionItemDescriptionStyle">@style/Widget.Leanback.GuidedActionItemDescriptionStyle</item>
+    <item name="guidedActionItemIconStyle">@style/Widget.Leanback.GuidedActionItemIconStyle</item>
+    <item name="guidedActionItemTitleStyle">@style/Widget.Leanback.GuidedActionItemTitleStyle</item>
+    <item name="guidedActionPressedAnimation">@animator/lb_guidedactions_item_pressed</item>
+    <item name="guidedActionTitleMaxLines">@integer/lb_guidedactions_item_title_max_lines</item>
+    <item name="guidedActionTitleMinLines">@integer/lb_guidedactions_item_title_min_lines</item>
+    <item name="guidedActionUnpressedAnimation">@animator/lb_guidedactions_item_unpressed</item>
+    <item name="guidedActionVerticalPadding">@dimen/lb_guidedactions_vertical_padding</item>
+    <item name="guidedActionsBackground">@color/lb_guidedactions_background</item>
+    <item name="guidedActionsBackgroundDark">@color/lb_guidedactions_background_dark</item>
+    <item name="guidedActionsElevation">@dimen/lb_guidedactions_elevation</item>
+    <item name="guidedActionsListStyle">@style/Widget.Leanback.GuidedActionsListStyle</item>
+    <item name="guidedActionsShadowWidth">@dimen/lb_guidedactions_section_shadow_width</item>
+    <item name="guidedButtonActionsListStyle">@style/Widget.Leanback.GuidedButtonActionsListStyle</item>
+    <item name="guidedButtonActionsWidthWeight">@dimen/lb_guidedbuttonactions_width_weight</item>
+    <item name="guidedStepBackground">?android:colorBackground</item>
+    <item name="guidedStepHeightWeight">@dimen/lb_guidedstep_height_weight</item>
+    <item name="guidedStepImeAppearingAnimation">@animator/lb_guidedstep_slide_up</item>
+    <item name="guidedStepImeDisappearingAnimation">@animator/lb_guidedstep_slide_down</item>
+    <item name="guidedStepKeyline">@dimen/lb_guidedstep_keyline</item>
+    <item name="guidedStepThemeFlag">true</item>
+    <item name="guidedSubActionsListStyle">@style/Widget.Leanback.GuidedSubActionsListStyle</item>
+  </style>
+  <style name="Theme.AppCompat.Leanback.GuidedStep.Half" parent="@style/Theme.AppCompat.Leanback.GuidedStep.HalfBase">
+    <item name="android:windowBackground">@android:color/transparent</item>
+    <item name="android:windowIsTranslucent">true</item>
+    <item name="guidedStepHeightWeight">@dimen/lb_guidedstep_height_weight_translucent</item>
+  </style>
+  <style name="Theme.AppCompat.Leanback.GuidedStep.HalfBase" parent="@style/Theme.AppCompat.Leanback.GuidedStep" />
+  <style name="Theme.AppCompat.Leanback.GuidedStepBase" parent="@style/Theme.AppCompat.LeanbackBase">
+    <item name="guidedActionsSelectorDrawable">?android:selectableItemBackground</item>
+  </style>
+  <style name="Theme.AppCompat.Leanback.Onboarding" parent="@style/Theme.AppCompat.LeanbackBase">
+    <item name="onboardingDescriptionStyle">@style/Widget.Leanback.OnboardingDescriptionStyle</item>
+    <item name="onboardingHeaderStyle">@style/Widget.Leanback.OnboardingHeaderStyle</item>
+    <item name="onboardingLogoStyle">@style/Widget.Leanback.OnboardingLogoStyle</item>
+    <item name="onboardingMainIconStyle">@style/Widget.Leanback.OnboardingMainIconStyle</item>
+    <item name="onboardingNavigatorContainerStyle">@style/Widget.Leanback.OnboardingNavigatorContainerStyle</item>
+    <item name="onboardingPageIndicatorStyle">@style/Widget.Leanback.OnboardingPageIndicatorStyle</item>
+    <item name="onboardingStartButtonStyle">@style/Widget.Leanback.OnboardingStartButtonStyle</item>
+    <item name="onboardingTitleStyle">@style/Widget.Leanback.OnboardingTitleStyle</item>
+  </style>
+  <style name="Theme.AppCompat.Leanback.VerticalGrid" parent="@style/Theme.AppCompat.Leanback" />
+  <style name="Theme.AppCompat.LeanbackBase" parent="@style/Theme.AppCompat.NoActionBar">
+    <item name="android:windowContentOverlay">@null</item>
+    <item name="android:windowOverscan">true</item>
+    <item name="android:windowTranslucentStatus">true</item>
+    <item name="android:windowTranslucentNavigation">true</item>
+    <item name="defaultBrandColor">@color/lb_default_brand_color</item>
+    <item name="defaultBrandColorDark">@color/lb_default_brand_color_dark</item>
+    <item name="guidedStepTheme">@style/Theme.AppCompat.Leanback.GuidedStep</item>
+    <item name="playbackControlsIconHighlightColor">@color/lb_playback_icon_highlight_no_theme</item>
+    <item name="playbackProgressPrimaryColor">@color/lb_playback_progress_color_no_theme</item>
+    <item name="viewInflaterClass">androidx.leanback.widget.LeanbackAppCompatViewInflater</item>
+  </style>
+  <style name="Theme.Leanback" parent="@style/Theme.LeanbackBase">
+    <item name="baseCardViewStyle">@style/Widget.Leanback.BaseCardViewStyle</item>
+    <item name="browsePaddingBottom">@dimen/lb_browse_padding_bottom</item>
+    <item name="browsePaddingEnd">@dimen/lb_browse_padding_end</item>
+    <item name="browsePaddingStart">@dimen/lb_browse_padding_start</item>
+    <item name="browsePaddingTop">@dimen/lb_browse_padding_top</item>
+    <item name="browseRowsFadingEdgeLength">@dimen/lb_browse_rows_fading_edge</item>
+    <item name="browseRowsMarginStart">@dimen/lb_browse_rows_margin_start</item>
+    <item name="browseRowsMarginTop">@dimen/lb_browse_rows_margin_top</item>
+    <item name="browseTitleIconStyle">@style/Widget.Leanback.Title.Icon</item>
+    <item name="browseTitleTextStyle">@style/Widget.Leanback.Title.Text</item>
+    <item name="browseTitleViewLayout">@layout/lb_browse_title</item>
+    <item name="browseTitleViewStyle">@style/Widget.Leanback.TitleView</item>
+    <item name="datePickerStyle">@style/Widget.Leanback.PickerStyle.DatePickerStyle</item>
+    <item name="defaultSearchBrightColor">?defaultSearchColor</item>
+    <item name="defaultSearchColor">@color/lb_default_search_color</item>
+    <item name="defaultSearchIcon">@drawable/lb_ic_in_app_search</item>
+    <item name="defaultSearchIconColor">@color/lb_default_search_icon_color</item>
+    <item name="defaultSectionHeaderColor">?defaultSearchColor</item>
+    <item name="detailsActionButtonStyle">@style/Widget.Leanback.DetailsActionButtonStyle</item>
+    <item name="detailsDescriptionBodyStyle">@style/Widget.Leanback.DetailsDescriptionBodyStyle</item>
+    <item name="detailsDescriptionSubtitleStyle">@style/Widget.Leanback.DetailsDescriptionSubtitleStyle</item>
+    <item name="detailsDescriptionTitleStyle">@style/Widget.Leanback.DetailsDescriptionTitleStyle</item>
+    <item name="errorMessageStyle">@style/Widget.Leanback.ErrorMessageStyle</item>
+    <item name="headerStyle">@style/Widget.Leanback.Header</item>
+    <item name="headersVerticalGridStyle">@style/Widget.Leanback.Headers.VerticalGridView</item>
+    <item name="imageCardViewBadgeStyle">@style/Widget.Leanback.ImageCardView.BadgeStyle</item>
+    <item name="imageCardViewContentStyle">@style/Widget.Leanback.ImageCardView.ContentStyle</item>
+    <item name="imageCardViewImageStyle">@style/Widget.Leanback.ImageCardView.ImageStyle</item>
+    <item name="imageCardViewInfoAreaStyle">@style/Widget.Leanback.ImageCardView.InfoAreaStyle</item>
+    <item name="imageCardViewStyle">@style/Widget.Leanback.ImageCardViewStyle</item>
+    <item name="imageCardViewTitleStyle">@style/Widget.Leanback.ImageCardView.TitleStyle</item>
+    <item name="itemsVerticalGridStyle">@style/Widget.Leanback.GridItems.VerticalGridView</item>
+    <item name="overlayDimActiveLevel">@fraction/lb_view_active_level</item>
+    <item name="overlayDimDimmedLevel">@fraction/lb_view_dimmed_level</item>
+    <item name="overlayDimMaskColor">@color/lb_view_dim_mask_color</item>
+    <item name="pickerStyle">@style/Widget.Leanback.PickerStyle</item>
+    <item name="pinPickerStyle">@style/Widget.Leanback.PickerStyle.PinPickerStyle</item>
+    <item name="playbackControlButtonLabelStyle">@style/Widget.Leanback.PlaybackControlLabelStyle</item>
+    <item name="playbackControlsActionIcons">@style/Widget.Leanback.PlaybackControlsActionIconsStyle</item>
+    <item name="playbackControlsAutoHideTickleTimeout">@integer/lb_playback_controls_tickle_timeout_ms</item>
+    <item name="playbackControlsAutoHideTimeout">@integer/lb_playback_controls_show_time_ms</item>
+    <item name="playbackControlsButtonStyle">@style/Widget.Leanback.PlaybackControlsButtonStyle</item>
+    <item name="playbackControlsTimeStyle">@style/Widget.Leanback.PlaybackControlsTimeStyle</item>
+    <item name="playbackMediaItemDetailsStyle">@style/Widget.Leanback.PlaybackMediaItemDetailsStyle</item>
+    <item name="playbackMediaItemDurationStyle">@style/Widget.Leanback.PlaybackMediaItemDurationStyle</item>
+    <item name="playbackMediaItemNameStyle">@style/Widget.Leanback.PlaybackMediaItemNameStyle</item>
+    <item name="playbackMediaItemNumberStyle">@style/Widget.Leanback.PlaybackMediaItemNumberStyle</item>
+    <item name="playbackMediaItemNumberViewFlipperLayout">@layout/lb_media_item_number_view_flipper</item>
+    <item name="playbackMediaItemNumberViewFlipperStyle">@style/Widget.Leanback.PlaybackMediaItemNumberViewFlipperStyle</item>
+    <item name="playbackMediaItemPaddingStart">@dimen/lb_playback_media_row_horizontal_padding</item>
+    <item name="playbackMediaItemRowStyle">@style/Widget.Leanback.PlaybackMediaItemRowStyle</item>
+    <item name="playbackMediaItemSeparatorStyle">@style/Widget.Leanback.PlaybackMediaItemSeparatorStyle</item>
+    <item name="playbackMediaListHeaderStyle">@style/Widget.Leanback.PlaybackMediaListHeaderStyle</item>
+    <item name="playbackMediaListHeaderTitleStyle">@style/Widget.Leanback.PlaybackMediaListHeaderTitleStyle</item>
+    <item name="playbackPaddingEnd">@dimen/lb_playback_controls_margin_end</item>
+    <item name="playbackPaddingStart">@dimen/lb_playback_controls_margin_start</item>
+    <item name="rowHeaderDescriptionStyle">@style/Widget.Leanback.Row.Header.Description</item>
+    <item name="rowHeaderDockStyle">@style/Widget.Leanback.Row.HeaderDock</item>
+    <item name="rowHeaderStyle">@style/Widget.Leanback.Row.Header</item>
+    <item name="rowHorizontalGridStyle">@style/Widget.Leanback.Row.HorizontalGridView</item>
+    <item name="rowHoverCardDescriptionStyle">@style/Widget.Leanback.Row.HoverCardDescription</item>
+    <item name="rowHoverCardTitleStyle">@style/Widget.Leanback.Row.HoverCardTitle</item>
+    <item name="rowsVerticalGridStyle">@style/Widget.Leanback.Rows.VerticalGridView</item>
+    <item name="searchOrbViewStyle">@style/Widget.Leanback.SearchOrbViewStyle</item>
+    <item name="sectionHeaderStyle">@style/Widget.Leanback.Header.Section</item>
+    <item name="timePickerStyle">@style/Widget.Leanback.PickerStyle.TimePickerStyle</item>
+  </style>
+  <style name="Theme.Leanback.Browse" parent="@style/Theme.Leanback" />
+  <style name="Theme.Leanback.Details" parent="@style/Theme.Leanback" />
+  <style name="Theme.Leanback.Details.NoSharedElementTransition" parent="@style/Theme.Leanback.Details" />
+  <style name="Theme.Leanback.GuidedStep" parent="@style/Theme.Leanback.GuidedStepBase">
+    <item name="android:windowBackground">@android:color/transparent</item>
+    <item name="guidanceBreadcrumbStyle">@style/Widget.Leanback.GuidanceBreadcrumbStyle</item>
+    <item name="guidanceContainerStyle">@style/Widget.Leanback.GuidanceContainerStyle</item>
+    <item name="guidanceDescriptionStyle">@style/Widget.Leanback.GuidanceDescriptionStyle</item>
+    <item name="guidanceIconStyle">@style/Widget.Leanback.GuidanceIconStyle</item>
+    <item name="guidanceTitleStyle">@style/Widget.Leanback.GuidanceTitleStyle</item>
+    <item name="guidedActionContentWidthWeight">@dimen/lb_guidedactions_width_weight</item>
+    <item name="guidedActionContentWidthWeightTwoPanels">@dimen/lb_guidedactions_width_weight_two_panels</item>
+    <item name="guidedActionDescriptionMinLines">@integer/lb_guidedactions_item_description_min_lines</item>
+    <item name="guidedActionDisabledChevronAlpha">@dimen/lb_guidedactions_item_disabled_chevron_alpha</item>
+    <item name="guidedActionEnabledChevronAlpha">@dimen/lb_guidedactions_item_enabled_chevron_alpha</item>
+    <item name="guidedActionItemCheckmarkStyle">@style/Widget.Leanback.GuidedActionItemCheckmarkStyle</item>
+    <item name="guidedActionItemChevronStyle">@style/Widget.Leanback.GuidedActionItemChevronStyle</item>
+    <item name="guidedActionItemContainerStyle">@style/Widget.Leanback.GuidedActionItemContainerStyle</item>
+    <item name="guidedActionItemContentStyle">@style/Widget.Leanback.GuidedActionItemContentStyle</item>
+    <item name="guidedActionItemDescriptionStyle">@style/Widget.Leanback.GuidedActionItemDescriptionStyle</item>
+    <item name="guidedActionItemIconStyle">@style/Widget.Leanback.GuidedActionItemIconStyle</item>
+    <item name="guidedActionItemTitleStyle">@style/Widget.Leanback.GuidedActionItemTitleStyle</item>
+    <item name="guidedActionPressedAnimation">@animator/lb_guidedactions_item_pressed</item>
+    <item name="guidedActionTitleMaxLines">@integer/lb_guidedactions_item_title_max_lines</item>
+    <item name="guidedActionTitleMinLines">@integer/lb_guidedactions_item_title_min_lines</item>
+    <item name="guidedActionUnpressedAnimation">@animator/lb_guidedactions_item_unpressed</item>
+    <item name="guidedActionVerticalPadding">@dimen/lb_guidedactions_vertical_padding</item>
+    <item name="guidedActionsBackground">@color/lb_guidedactions_background</item>
+    <item name="guidedActionsBackgroundDark">@color/lb_guidedactions_background_dark</item>
+    <item name="guidedActionsElevation">@dimen/lb_guidedactions_elevation</item>
+    <item name="guidedActionsListStyle">@style/Widget.Leanback.GuidedActionsListStyle</item>
+    <item name="guidedActionsShadowWidth">@dimen/lb_guidedactions_section_shadow_width</item>
+    <item name="guidedButtonActionsListStyle">@style/Widget.Leanback.GuidedButtonActionsListStyle</item>
+    <item name="guidedButtonActionsWidthWeight">@dimen/lb_guidedbuttonactions_width_weight</item>
+    <item name="guidedStepBackground">?android:colorBackground</item>
+    <item name="guidedStepHeightWeight">@dimen/lb_guidedstep_height_weight</item>
+    <item name="guidedStepImeAppearingAnimation">@animator/lb_guidedstep_slide_up</item>
+    <item name="guidedStepImeDisappearingAnimation">@animator/lb_guidedstep_slide_down</item>
+    <item name="guidedStepKeyline">@dimen/lb_guidedstep_keyline</item>
+    <item name="guidedStepThemeFlag">true</item>
+    <item name="guidedSubActionsListStyle">@style/Widget.Leanback.GuidedSubActionsListStyle</item>
+  </style>
+  <style name="Theme.Leanback.GuidedStep.Half" parent="@style/Theme.Leanback.GuidedStep.HalfBase">
+    <item name="android:windowBackground">@android:color/transparent</item>
+    <item name="android:windowIsTranslucent">true</item>
+    <item name="guidedStepHeightWeight">@dimen/lb_guidedstep_height_weight_translucent</item>
+  </style>
+  <style name="Theme.Leanback.GuidedStep.HalfBase" parent="@style/Theme.Leanback.GuidedStep" />
+  <style name="Theme.Leanback.GuidedStepBase" parent="@style/Theme.LeanbackBase">
+    <item name="guidedActionsSelectorDrawable">?android:selectableItemBackground</item>
+  </style>
+  <style name="Theme.Leanback.Onboarding" parent="@style/Theme.LeanbackBase">
+    <item name="onboardingDescriptionStyle">@style/Widget.Leanback.OnboardingDescriptionStyle</item>
+    <item name="onboardingHeaderStyle">@style/Widget.Leanback.OnboardingHeaderStyle</item>
+    <item name="onboardingLogoStyle">@style/Widget.Leanback.OnboardingLogoStyle</item>
+    <item name="onboardingMainIconStyle">@style/Widget.Leanback.OnboardingMainIconStyle</item>
+    <item name="onboardingNavigatorContainerStyle">@style/Widget.Leanback.OnboardingNavigatorContainerStyle</item>
+    <item name="onboardingPageIndicatorStyle">@style/Widget.Leanback.OnboardingPageIndicatorStyle</item>
+    <item name="onboardingStartButtonStyle">@style/Widget.Leanback.OnboardingStartButtonStyle</item>
+    <item name="onboardingTitleStyle">@style/Widget.Leanback.OnboardingTitleStyle</item>
+  </style>
+  <style name="Theme.Leanback.VerticalGrid" parent="@style/Theme.Leanback" />
+  <style name="Theme.LeanbackBase" parent="@android:style/Theme.Holo.NoActionBar.TranslucentDecor">
+    <item name="android:windowOverscan">true</item>
+    <item name="defaultBrandColor">@color/lb_default_brand_color</item>
+    <item name="defaultBrandColorDark">@color/lb_default_brand_color_dark</item>
+    <item name="guidedStepTheme">@style/Theme.Leanback.GuidedStep</item>
+    <item name="playbackControlsIconHighlightColor">@color/lb_playback_icon_highlight_no_theme</item>
+    <item name="playbackProgressPrimaryColor">@color/lb_playback_progress_color_no_theme</item>
+  </style>
+  <style name="Theme.Transparent" parent="@style/Theme.AppCompat.NoActionBar">
+    <item name="android:windowBackground">@android:color/transparent</item>
+    <item name="android:windowNoTitle">true</item>
+    <item name="android:windowIsFloating">true</item>
+    <item name="android:windowIsTranslucent">true</item>
+    <item name="android:windowContentOverlay">@null</item>
+    <item name="android:backgroundDimEnabled">false</item>
+  </style>
+  <style name="ThemeOverlayColorAccentRed" />
+  <style name="WarmingOrangesTheme" parent="@style/AppTheme.NoActionBar">
+    <item name="color_theme">#ffff7200</item>
+    <item name="color_theme_40">#66ff7200</item>
+    <item name="color_theme_50">#80ff7200</item>
+    <item name="color_theme_60">#99ff7200</item>
+    <item name="color_theme_70">#b3ff7200</item>
+    <item name="color_theme_80">#ccff7200</item>
+  </style>
+  <style name="bottom.epgtime.progress.horizontal" parent="@android:style/Widget.ProgressBar.Horizontal">
+    <item name="android:maxHeight">12.0dip</item>
+    <item name="android:indeterminateOnly">false</item>
+    <item name="android:progressDrawable">@drawable/shape_bottom_epgtime_progressbar</item>
+    <item name="android:minHeight">12.0dip</item>
+  </style>
+  <style name="launcher.activity.style" parent="@style/Theme.AppCompat.Light.NoActionBar">
+    <item name="android:windowBackground">@color/transparent</item>
+    <item name="android:windowNoTitle">true</item>
+    <item name="android:windowFullscreen">true</item>
+    <item name="android:windowActionBar">false</item>
+    <item name="android:windowTranslucentStatus">true</item>
+  </style>
+  <style name="video.horizontal.progressBar" parent="">
+    <item name="android:maxWidth">12.0dip</item>
+    <item name="android:indeterminateOnly">false</item>
+    <item name="android:indeterminateDrawable">@android:drawable/progress_indeterminate_horizontal</item>
+    <item name="android:progressDrawable">@drawable/play_progress_horizontal</item>
+    <item name="android:indeterminateDuration">3500</item>
+    <item name="android:indeterminateBehavior">repeat</item>
+    <item name="android:minWidth">1.0dip</item>
+  </style>
+  <style name="video.vertical.progressBar" parent="">
+    <item name="android:maxWidth">12.0dip</item>
+    <item name="android:indeterminateOnly">false</item>
+    <item name="android:indeterminateDrawable">@android:drawable/progress_indeterminate_horizontal</item>
+    <item name="android:progressDrawable">@drawable/play_progress_vertical</item>
+    <item name="android:indeterminateDuration">3500</item>
+    <item name="android:indeterminateBehavior">repeat</item>
+    <item name="android:minWidth">1.0dip</item>
+  </style>
+  <style name="info">
+    <item name="android:text">F28112D165503A769BD72D38C6450F5E4D39ABF8780933ED5140F7BBB02B59E4BD1B68A111B5EA5BB123D99E39BDE07403FEAB7FC3F6033EECC91684B8BEF1B9627B104C83F8FDC59C221D015175C47A090CFA14A7E0071CB127572916697561A18B588BE3F71CB22CF81B81D02CA78F0A051BFFF8FDD15866BDF096EB605032</item>
+  </style>
+</resources>

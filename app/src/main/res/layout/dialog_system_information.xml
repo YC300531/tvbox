@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:background="@drawable/shape_dialog_drawable" android:paddingBottom="20.0dip" android:layout_width="435.0dip" android:layout_height="wrap_content" android:paddingStart="20.0dip" android:paddingEnd="20.0dip">
+        <TextView android:textSize="18.0dip" android:textColor="@color/color_FFFFFF_90" android:gravity="center" android:layout_gravity="center" android:id="@+id/about_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" />
+        <View android:background="@color/color_FFFFFF_20" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginBottom="20.0dip" />
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="start" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="15.0dip">
+                <com.github.tvbox.osc.ui.tv.CustomView.MarqueeTextView android:textSize="16.0dip" android:textColor="@color/color_FFFFFF_90" android:ellipsize="marquee" android:id="@+id/about_Brand" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" android:singleLine="true" />
+                <com.github.tvbox.osc.ui.tv.CustomView.MarqueeTextView android:textSize="16.0dip" android:textColor="@color/color_FFFFFF_90" android:ellipsize="marquee" android:id="@+id/about_Models" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" android:singleLine="true" />
+                <com.github.tvbox.osc.ui.tv.CustomView.MarqueeTextView android:textSize="16.0dip" android:textColor="@color/color_FFFFFF_90" android:ellipsize="marquee" android:id="@+id/about_SDK_version" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" android:singleLine="true" />
+                <com.github.tvbox.osc.ui.tv.CustomView.MarqueeTextView android:textSize="16.0dip" android:textColor="@color/color_FFFFFF_90" android:ellipsize="marquee" android:id="@+id/about_System_version" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+            </LinearLayout>
+            <LinearLayout android:gravity="start" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="15.0dip">
+                <com.github.tvbox.osc.ui.tv.CustomView.MarqueeTextView android:textSize="16.0dip" android:textColor="@color/color_FFFFFF_90" android:ellipsize="marquee" android:id="@+id/about_Network_type" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" android:singleLine="true" />
+                <com.github.tvbox.osc.ui.tv.CustomView.MarqueeTextView android:textSize="16.0dip" android:textColor="@color/color_FFFFFF_90" android:ellipsize="marquee" android:id="@+id/about_Network_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" android:singleLine="true" />
+                <com.github.tvbox.osc.ui.tv.CustomView.MarqueeTextView android:textSize="16.0dip" android:textColor="@color/color_FFFFFF_90" android:ellipsize="marquee" android:id="@+id/about_Network_status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" android:singleLine="true" />
+                <com.github.tvbox.osc.ui.tv.CustomView.MarqueeTextView android:textSize="16.0dip" android:textColor="@color/color_FFFFFF_90" android:ellipsize="marquee" android:id="@+id/about_IP_address" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

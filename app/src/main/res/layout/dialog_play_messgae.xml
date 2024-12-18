@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:gravity="center" android:background="@drawable/shape_dialog_drawable" android:paddingBottom="20.0dip" android:layout_width="435.0dip" android:layout_height="wrap_content" android:paddingStart="20.0dip" android:paddingEnd="20.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="18.0dip" android:textColor="@color/color_FFFFFF_90" android:gravity="center" android:layout_gravity="center" android:id="@+id/title" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintBottom_toTopOf="@id/view" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintVertical_weight="1.0" />
+    <View android:id="@+id/view" android:background="@color/color_FFFFFF_20" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginBottom="20.0dip" app:layout_constraintBottom_toTopOf="@id/scrollView" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@android:id/title" />
+    <ScrollView android:gravity="start" android:id="@+id/scrollView" android:scrollbars="none" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHeight_default="wrap" app:layout_constraintHeight_max="220.0dip" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/title">
+        <LinearLayout android:gravity="start" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="start" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:gravity="start" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:paddingEnd="5.0dip">
+                    <LinearLayout android:orientation="horizontal" android:id="@+id/numGroup" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <TextView android:textSize="16.0dip" android:textColor="@color/color_FFFFFF_90" android:id="@+id/num" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                        <TextView android:textSize="16.0dip" android:textColor="@color/color_FFFFFF_90" android:id="@+id/numTxt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lineSpacingExtra="10.0dip" />
+                    </LinearLayout>
+                    <LinearLayout android:orientation="horizontal" android:id="@+id/nameGroup" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip">
+                        <TextView android:textSize="16.0dip" android:textColor="@color/color_FFFFFF_90" android:id="@+id/name" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                        <TextView android:textSize="16.0dip" android:textColor="@color/color_FFFFFF_90" android:ellipsize="end" android:id="@+id/nameTxt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lineSpacingExtra="10.0dip" />
+                    </LinearLayout>
+                    <LinearLayout android:orientation="horizontal" android:id="@+id/grpGroup" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip">
+                        <TextView android:textSize="16.0dip" android:textColor="@color/color_FFFFFF_90" android:id="@+id/grp" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                        <TextView android:textSize="16.0dip" android:textColor="@color/color_FFFFFF_90" android:id="@+id/grpTxt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lineSpacingExtra="10.0dip" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:gravity="start" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <LinearLayout android:orientation="horizontal" android:id="@+id/audioTrackGroup" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip">
+                        <TextView android:textSize="16.0dip" android:textColor="@color/color_FFFFFF_90" android:id="@+id/audioTrack" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lineSpacingExtra="10.0dip" />
+                        <TextView android:textSize="16.0dip" android:textColor="@color/color_FFFFFF_90" android:id="@+id/audioTrackTxt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lineSpacingExtra="10.0dip" />
+                    </LinearLayout>
+                    <LinearLayout android:orientation="horizontal" android:id="@+id/fpsGroup" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <TextView android:textSize="16.0dip" android:textColor="@color/color_FFFFFF_90" android:id="@+id/fps" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lineSpacingExtra="10.0dip" />
+                        <TextView android:textSize="16.0dip" android:textColor="@color/color_FFFFFF_90" android:id="@+id/fpsTxt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lineSpacingExtra="10.0dip" />
+                    </LinearLayout>
+                    <LinearLayout android:orientation="horizontal" android:id="@+id/videoResolutionGroup" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip">
+                        <TextView android:textSize="16.0dip" android:textColor="@color/color_FFFFFF_90" android:id="@+id/videoResolution" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lineSpacingExtra="10.0dip" />
+                        <TextView android:textSize="16.0dip" android:textColor="@color/color_FFFFFF_90" android:id="@+id/videoResolutionTxt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lineSpacingExtra="10.0dip" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/urlGroup" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip">
+                <TextView android:textSize="16.0dip" android:textColor="@color/color_FFFFFF_90" android:id="@+id/url" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                <TextView android:textSize="16.0dip" android:textColor="@color/color_FFFFFF_90" android:id="@+id/urlTxt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lineSpacingExtra="10.0dip" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/seekbackurlGroup" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip">
+                <TextView android:textSize="16.0dip" android:textColor="@color/color_FFFFFF_90" android:id="@+id/seekbackurl" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lineSpacingExtra="10.0dip" />
+                <TextView android:textSize="16.0dip" android:textColor="@color/color_FFFFFF_90" android:id="@+id/seekbackurlTxt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lineSpacingExtra="10.0dip" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/userAgentGroup" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip">
+                <TextView android:textSize="16.0dip" android:textColor="@color/color_FFFFFF_90" android:id="@+id/userAgent" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                <TextView android:textSize="16.0dip" android:textColor="@color/color_FFFFFF_90" android:id="@+id/userAgentTxt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lineSpacingExtra="10.0dip" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/jsNameGroup" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip">
+                <TextView android:textSize="16.0dip" android:textColor="@color/color_FFFFFF_90" android:id="@+id/jsName" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                <TextView android:textSize="16.0dip" android:textColor="@color/color_FFFFFF_90" android:id="@+id/jsNameTxt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lineSpacingExtra="10.0dip" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/jsUrlGroup" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip">
+                <TextView android:textSize="16.0dip" android:textColor="@color/color_FFFFFF_90" android:id="@+id/jsUrl" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                <TextView android:textSize="16.0dip" android:textColor="@color/color_FFFFFF_90" android:id="@+id/jsUrlTxt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lineSpacingExtra="10.0dip" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/jsReturnGroup" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip">
+                <TextView android:textSize="16.0dip" android:textColor="@color/color_FFFFFF_90" android:id="@+id/jsReturn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lineSpacingExtra="10.0dip" />
+                <TextView android:textSize="16.0dip" android:textColor="@color/color_FFFFFF_90" android:id="@+id/jsReturnTxt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lineSpacingExtra="10.0dip" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

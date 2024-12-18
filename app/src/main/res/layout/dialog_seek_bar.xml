@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:focusable="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="bottom|center" android:orientation="vertical" android:id="@+id/ll_seekbar" android:background="@drawable/shape_dialog_seekbar_drawable" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@+id/seekBar_play_pause" android:background="@drawable/button_play_pause_style" android:padding="5.0dip" android:clickable="true" android:layout_width="65.0dip" android:layout_height="65.0dip" android:layout_marginBottom="110.0dip" android:src="@drawable/icon_play_pause" android:scaleType="fitCenter" />
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="100.0dip" android:paddingEnd="100.0dip">
+            <TextView android:textSize="20.0dip" android:textColor="@color/color_FFFFFF" android:gravity="start" android:id="@+id/seekbar_channel_number" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <TextView android:textSize="20.0dip" android:textColor="@color/color_FFFFFF" android:gravity="end" android:layout_gravity="end" android:id="@+id/seekbar_channel_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="5.0dip" />
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/seekBackTimeLayout" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textSize="17.0dip" android:textColor="@color/color_FFFFFF" android:gravity="start" android:layout_gravity="start" android:id="@+id/seekBarProgram_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="00:00:00" android:layout_marginEnd="5.0dip" />
+                <TextView android:textSize="17.0dip" android:textColor="@color/color_FFFFFF" android:ellipsize="end" android:gravity="start" android:layout_gravity="start" android:id="@+id/seekBarProgram_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:gravity="bottom" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="50.0dip" android:paddingEnd="50.0dip">
+            <TextView android:textSize="17.0dip" android:textColor="@color/color_FFFFFF" android:gravity="center" android:id="@+id/curr_time" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="00:00:00" android:layout_weight="0.1" android:fontFamily="sans-serif-condensed" />
+            <com.warkiz.widget.IndicatorSeekBar android:id="@+id/seekBar" android:focusable="true" android:focusableInTouchMode="false" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_weight="0.8" app:isb_progress="1.0" app:isb_seek_smoothly="true" app:isb_show_indicator="none" app:isb_show_tick_marks_type="divider" app:isb_thumb_color="@color/color_FFFFFF" app:isb_thumb_size="15.0dip" app:isb_track_progress_color="?color_theme" app:isb_track_progress_size="3.0dip" />
+            <TextView android:textSize="17.0dip" android:textColor="@color/color_FFFFFF" android:gravity="center" android:id="@+id/total_time" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="00:00:00" android:layout_weight="0.1" android:fontFamily="sans-serif-condensed" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:paddingStart="100.0dip" android:paddingEnd="100.0dip">
+            <TextView android:textSize="17.0dip" android:textStyle="bold" android:textColor="@color/color_FFFFFF" android:gravity="end|center" android:id="@+id/seekBarIsSHIYI" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

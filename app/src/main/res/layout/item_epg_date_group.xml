@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="6.0dip" android:paddingEnd="6.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="18.0dip" android:textColor="@android:color/white" android:gravity="center" android:id="@+id/tvEpgWeek" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <TextView android:textSize="14.0dip" android:textColor="@color/color_FFFFFF_80" android:gravity="center" android:id="@+id/tvEpgMonthDay" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</LinearLayout>
